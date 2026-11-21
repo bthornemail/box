@@ -1,0 +1,262 @@
+{
+  "main": {
+    "id": "b79567e5883fd6de",
+    "type": "split",
+    "children": [
+      {
+        "id": "68ece263a99623c4",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "9beb5bd5911e3ebb",
+            "type": "leaf",
+            "state": {
+              "type": "image",
+              "state": {
+                "file": "8200/quad.dot.png"
+              },
+              "icon": "lucide-image",
+              "title": "quad.dot"
+            }
+          },
+          {
+            "id": "76ca201c60dfb84a",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Zig.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "Zig"
+            }
+          },
+          {
+            "id": "98b816bfde6e5988",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Untitled 5.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "Untitled 5"
+            }
+          },
+          {
+            "id": "8fd2e60f4475d293",
+            "type": "leaf",
+            "state": {
+              "type": "image",
+              "state": {
+                "file": "8200/quad.dot.png"
+              },
+              "icon": "lucide-image",
+              "title": "quad.dot"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "vertical"
+  },
+  "left": {
+    "id": "8ba2d1497fbf3d8a",
+    "type": "mobile-drawer",
+    "children": [
+      {
+        "id": "f67c6aa942409e38",
+        "type": "leaf",
+        "state": {
+          "type": "file-explorer",
+          "state": {
+            "sortOrder": "alphabetical",
+            "autoReveal": false,
+            "showSearch": false,
+            "searchQuery": ""
+          },
+          "icon": "lucide-folder-closed",
+          "title": "Files"
+        }
+      },
+      {
+        "id": "145c6574a3ca4ba5",
+        "type": "leaf",
+        "state": {
+          "type": "search",
+          "state": {
+            "query": "",
+            "matchingCase": false,
+            "explainSearch": false,
+            "collapseAll": false,
+            "extraContext": false,
+            "sortOrder": "alphabetical"
+          },
+          "icon": "lucide-search",
+          "title": "Search"
+        }
+      },
+      {
+        "id": "303d2436f046d741",
+        "type": "leaf",
+        "state": {
+          "type": "tag",
+          "state": {
+            "sortOrder": "frequency",
+            "useHierarchy": true,
+            "showSearch": false,
+            "searchQuery": ""
+          },
+          "icon": "lucide-tags",
+          "title": "Tags"
+        }
+      },
+      {
+        "id": "5094f92a6c2a1743",
+        "type": "leaf",
+        "state": {
+          "type": "all-properties",
+          "state": {
+            "sortOrder": "frequency",
+            "showSearch": false,
+            "searchQuery": ""
+          },
+          "icon": "lucide-archive",
+          "title": "All properties"
+        }
+      },
+      {
+        "id": "7d5433aeb75fc6c7",
+        "type": "leaf",
+        "state": {
+          "type": "bookmarks",
+          "state": {
+            "showSearch": false,
+            "searchQuery": ""
+          },
+          "icon": "lucide-bookmark",
+          "title": "Bookmarks"
+        }
+      }
+    ],
+    "currentTab": 0
+  },
+  "right": {
+    "id": "4d546c1b054103f7",
+    "type": "mobile-drawer",
+    "children": [
+      {
+        "id": "00a14dcb40213edd",
+        "type": "leaf",
+        "state": {
+          "type": "backlink",
+          "state": {
+            "file": "8200/quad.dot.png",
+            "collapseAll": false,
+            "extraContext": false,
+            "sortOrder": "alphabetical",
+            "showSearch": false,
+            "searchQuery": "",
+            "backlinkCollapsed": false,
+            "unlinkedCollapsed": true
+          },
+          "icon": "links-coming-in",
+          "title": "Backlinks"
+        }
+      },
+      {
+        "id": "076eb7710129f3c5",
+        "type": "leaf",
+        "state": {
+          "type": "outgoing-link",
+          "state": {
+            "file": "Untitled.md",
+            "linksCollapsed": false,
+            "unlinkedCollapsed": true
+          },
+          "icon": "links-going-out",
+          "title": "Outgoing links"
+        }
+      },
+      {
+        "id": "fcf97791cd6ee390",
+        "type": "leaf",
+        "state": {
+          "type": "outline",
+          "state": {
+            "file": "Untitled.md",
+            "followCursor": false,
+            "showSearch": false,
+            "searchQuery": ""
+          },
+          "icon": "lucide-list",
+          "title": "Outline"
+        }
+      }
+    ],
+    "currentTab": 0
+  },
+  "left-ribbon": {
+    "hiddenItems": {
+      "switcher:Open quick switcher": false,
+      "graph:Open graph view": false,
+      "canvas:Create new canvas": false,
+      "daily-notes:Open today's daily note": false,
+      "templates:Insert template": false,
+      "command-palette:Open command palette": false,
+      "bases:Create new base": false
+    }
+  },
+  "active": "9beb5bd5911e3ebb",
+  "lastOpenFiles": [
+    "dot/zig.svg",
+    "8200/quad.dot.png",
+    "8200/beta.dot.png",
+    "food.dot.md",
+    "Dom.md",
+    "Board.md",
+    "8200/#beta.dot#",
+    "Zig.md",
+    "8200",
+    "Space.md",
+    "Dominoes.md",
+    "Untitled.md",
+    "Untitled 2.md",
+    "shell/To work with an eMMC disk image (.md",
+    "shell/emmc termux img virtual drive2 - Google Search.pdf",
+    "shell/code1.md",
+    "shell/code2.md",
+    "Untitled 6.md",
+    "shell/code22.md",
+    "shell/code21.md",
+    "shell/code20.md",
+    "shell/code19.md",
+    "shell/code17.md",
+    "shell/code16.md",
+    "shell/code15.md",
+    "shell/code14.md",
+    "shell/code13.md",
+    "shell/code12.md",
+    "shell/code11.md",
+    "shell/code10.md",
+    "shell/code9.md",
+    "shell",
+    "dot/ziggurat.svg",
+    "examples/Wirth-syntax-notation.png",
+    "state.svg",
+    "step.svg",
+    "ziggurat.svg",
+    "dot/#ziggurat.dot#",
+    "food.dot.md.2.svg",
+    "dot/ziggurat.dot",
+    "dot/#build.md#",
+    "dot",
+    "examples/neural-network.gv.txt.svg",
+    "examples/table.svg",
+    "examples"
+  ]
+}

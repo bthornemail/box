@@ -1,0 +1,15 @@
+Content-Type: multipart/form-data; boundary=boundaryString
+(other headers associated with the multipart document as a whole)
+
+--boundaryString
+Content-Disposition: form-data; name="myFile"; filename="img.jpg"
+Content-Type: image/jpeg
+
+(data)
+--boundaryString
+Content-Disposition: form-data; name="myField"
+
+(data)
+--boundaryString
+(more subparts)
+--boundaryString--

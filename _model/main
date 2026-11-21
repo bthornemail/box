@@ -1,0 +1,82 @@
+     1	Usage: ascii [-adxohv] [-t] [char-alias...]$
+     2	   -t = one-line output  -a = vertical format$
+     3	   -d = decimal table  -o = octal table  -x = hex table  -b binary table$
+     4	   -h = this help screen -v = version information$
+     5	Prints all aliases of an ASCII character. Args may be chars, C \-escapes,$
+     6	English names, ^-escapes, ASCII mnemonics, or numerics in decimal/octal/hex.$
+     7	$
+     8	Dec Hex    Dec Hex    Dec Hex  Dec Hex  Dec Hex  Dec Hex   Dec Hex   Dec Hex$
+     9	  0 00 NUL  16 10 DLE  32 20    48 30 0  64 40 @  80 50 P   96 60 `  112 70 p$
+    10	  1 01 SOH  17 11 DC1  33 21 !  49 31 1  65 41 A  81 51 Q   97 61 a  113 71 q$
+    11	  2 02 STX  18 12 DC2  34 22 "  50 32 2  66 42 B  82 52 R   98 62 b  114 72 r$
+    12	  3 03 ETX  19 13 DC3  35 23 #  51 33 3  67 43 C  83 53 S   99 63 c  115 73 s$
+    13	  4 04 EOT  20 14 DC4  36 24 $  52 34 4  68 44 D  84 54 T  100 64 d  116 74 t$
+    14	  5 05 ENQ  21 15 NAK  37 25 %  53 35 5  69 45 E  85 55 U  101 65 e  117 75 u$
+    15	  6 06 ACK  22 16 SYN  38 26 &  54 36 6  70 46 F  86 56 V  102 66 f  118 76 v$
+    16	  7 07 BEL  23 17 ETB  39 27 '  55 37 7  71 47 G  87 57 W  103 67 g  119 77 w$
+    17	  8 08 BS   24 18 CAN  40 28 (  56 38 8  72 48 H  88 58 X  104 68 h  120 78 x$
+    18	  9 09 HT   25 19 EM   41 29 )  57 39 9  73 49 I  89 59 Y  105 69 i  121 79 y$
+    19	 10 0A LF   26 1A SUB  42 2A *  58 3A :  74 4A J  90 5A Z  106 6A j  122 7A z$
+    20	 11 0B VT   27 1B ESC  43 2B +  59 3B ;  75 4B K  91 5B [  107 6B k  123 7B {$
+    21	 12 0C FF   28 1C FS   44 2C ,  60 3C <  76 4C L  92 5C \  108 6C l  124 7C |$
+    22	 13 0D CR   29 1D GS   45 2D -  61 3D =  77 4D M  93 5D ]  109 6D m  125 7D }$
+    23	 14 0E SO   30 1E RS   46 2E .  62 3E >  78 4E N  94 5E ^  110 6E n  126 7E ~$
+    24	 15 0F SI   31 1F US   47 2F /  63 3F ?  79 4F O  95 5F _  111 6F o  127 7F DEL$
+     1	     1^I                               6202                               $$
+     2	     2^I$$
+     3	     3^I       hcraM                 yraurbeF               yraunaJ       $$
+     4	     4^IaS rF hT eW uT oM uS   aS rF hT eW uT oM uS   aS rF hT eW uT oM uS$$
+     5	     5^I7  6  5  4  3  2  1    7  6  5  4  3  2  1    3  2  1             $$
+     6	     6^I41 31 21 11 01 9  8    41 31 21 11 01 9  8    01 9  8  7  6  5  4 $$
+     7	     7^I12 02 91 81 71 61 51   12 02 91 81 71 61 51   71 61 51 41 31 21 11$$
+     8	     8^I82 72 62 52 42 32 22   82 72 62 52 42 32 22   42 32 22 12 02 91 81$$
+     9	     9^I            13 03 92                          13 03 92 82 72 62 52$$
+    10	    10^I                                                                  $$
+    11	    11^I        enuJ                   yaM                   lirpA        $$
+    12	    12^IaS rF hT eW uT oM uS   aS rF hT eW uT oM uS   aS rF hT eW uT oM uS$$
+    13	    13^I6  5  4  3  2  1       2  1                   4  3  2  1          $$
+    14	    14^I31 21 11 01 9  8  7    9  8  7  6  5  4  3    11 01 9  8  7  6  5 $$
+    15	    15^I02 91 81 71 61 51 41   61 51 41 31 21 11 01   81 71 61 51 41 31 21$$
+    16	    16^I72 62 52 42 32 22 12   32 22 12 02 91 81 71   52 42 32 22 12 02 91$$
+    17	    17^I            03 92 82   03 92 82 72 62 52 42         03 92 82 72 62$$
+    18	    18^I                                         13                       $$
+    19	    19^I     rebmetpeS                tsuguA                  yluJ        $$
+    20	    20^IaS rF hT eW uT oM uS   aS rF hT eW uT oM uS   aS rF hT eW uT oM uS$$
+    21	    21^I5  4  3  2  1          1                      4  3  2  1          $$
+    22	    22^I21 11 01 9  8  7  6    8  7  6  5  4  3  2    11 01 9  8  7  6  5 $$
+    23	    23^I91 81 71 61 51 41 31   51 41 31 21 11 01 9    81 71 61 51 41 31 21$$
+    24	    24^I62 52 42 32 22 12 02   22 12 02 91 81 71 61   52 42 32 22 12 02 91$$
+    25	    25^I         03 92 82 72   92 82 72 62 52 42 32      13 03 92 82 72 62$$
+    26	    26^I                                      13 03                       $$
+    27	    27^I      rebmeceD               rebmevoN               rebotcO       $$
+    28	    28^IaS rF hT eW uT oM uS   aS rF hT eW uT oM uS   aS rF hT eW uT oM uS$$
+    29	    29^I5  4  3  2  1          7  6  5  4  3  2  1    3  2  1             $$
+    30	    30^I21 11 01 9  8  7  6    41 31 21 11 01 9  8    01 9  8  7  6  5  4 $$
+    31	    31^I91 81 71 61 51 41 31   12 02 91 81 71 61 51   71 61 51 41 31 21 11$$
+    32	    32^I62 52 42 32 22 12 02   82 72 62 52 42 32 22   42 32 22 12 02 91 81$$
+    33	    33^I      13 03 92 82 72                  03 92   13 03 92 82 72 62 52$$
+    34	    34^I                                                                  $$
+    35	Usage: ascii [-adxohv] [-t] [char-alias...]$
+    36	   -t = one-line output  -a = vertical format$
+    37	   -d = decimal table  -o = octal table  -x = hex table  -b binary table$
+    38	   -h = this help screen -v = version information$
+    39	Prints all aliases of an ASCII character. Args may be chars, C \-escapes,$
+    40	English names, ^-escapes, ASCII mnemonics, or numerics in decimal/octal/hex.$
+    41	$
+    42	Dec Hex    Dec Hex    Dec Hex  Dec Hex  Dec Hex  Dec Hex   Dec Hex   Dec Hex$
+    43	  0 00 NUL  16 10 DLE  32 20    48 30 0  64 40 @  80 50 P   96 60 `  112 70 p$
+    44	  1 01 SOH  17 11 DC1  33 21 !  49 31 1  65 41 A  81 51 Q   97 61 a  113 71 q$
+    45	  2 02 STX  18 12 DC2  34 22 "  50 32 2  66 42 B  82 52 R   98 62 b  114 72 r$
+    46	  3 03 ETX  19 13 DC3  35 23 #  51 33 3  67 43 C  83 53 S   99 63 c  115 73 s$
+    47	  4 04 EOT  20 14 DC4  36 24 $  52 34 4  68 44 D  84 54 T  100 64 d  116 74 t$
+    48	  5 05 ENQ  21 15 NAK  37 25 %  53 35 5  69 45 E  85 55 U  101 65 e  117 75 u$
+    49	  6 06 ACK  22 16 SYN  38 26 &  54 36 6  70 46 F  86 56 V  102 66 f  118 76 v$
+    50	  7 07 BEL  23 17 ETB  39 27 '  55 37 7  71 47 G  87 57 W  103 67 g  119 77 w$
+    51	  8 08 BS   24 18 CAN  40 28 (  56 38 8  72 48 H  88 58 X  104 68 h  120 78 x$
+    52	  9 09 HT   25 19 EM   41 29 )  57 39 9  73 49 I  89 59 Y  105 69 i  121 79 y$
+    53	 10 0A LF   26 1A SUB  42 2A *  58 3A :  74 4A J  90 5A Z  106 6A j  122 7A z$
+    54	 11 0B VT   27 1B ESC  43 2B +  59 3B ;  75 4B K  91 5B [  107 6B k  123 7B {$
+    55	 12 0C FF   28 1C FS   44 2C ,  60 3C <  76 4C L  92 5C \  108 6C l  124 7C |$
+    56	 13 0D CR   29 1D GS   45 2D -  61 3D =  77 4D M  93 5D ]  109 6D m  125 7D }$
+    57	 14 0E SO   30 1E RS   46 2E .  62 3E >  78 4E N  94 5E ^  110 6E n  126 7E ~$
+    58	 15 0F SI   31 1F US   47 2F /  63 3F ?  79 4F O  95 5F _  111 6F o  127 7F DEL$

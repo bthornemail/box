@@ -1,0 +1,38 @@
+strict digraph G  {
+    A  [label="&spades;"]
+    B  [label="&clubs;"]
+    C  [label="&hearts;"]
+    D  [label="&diams;"]
+
+    
+    0  [label="("]
+    1  [label=")"]
+    2  [label="*"]
+    3  [label=","]
+    4  [label="-"]
+
+    IAM [label="&THORN;"]
+    NAME [label="u+10103&;"]
+  a -> b
+  a -> b
+  b -> a [label="&beta;"]
+  layers="local:pvt:test:new:ofc";
+  layerselect="local";
+  dim=10; // layout dimensions -neato not shown ND_pos(n)[i]
+  dimen=10; // rendering dimensions  -neato not shown ND_pos(n)[i]
+  
+	node1  [layer="pvt"];
+	node2  [layer="all"];
+	node3  [layer="pvt:ofc"];		/* pvt, test, new, and ofc */
+	node2 -> node3  [layer="pvt:all"];	/* same as pvt:ofc */
+	node2 -> node4 [layer=3];		/* same as test */
+	  subgraph sub0 {
+    node [color=red];
+    a; b; c;
+  }
+  subgraph sub1 {
+    node [shape=diamond];
+    a; b; c;
+  }
+
+}

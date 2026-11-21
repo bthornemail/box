@@ -1,0 +1,75 @@
+<html>
+  <head>
+    <script src="//cdn.jsdelivr.net/npm/eruda"></script>
+    <script>eruda.init();</script>
+      <style>
+    del::before,
+    del::after {
+	clip-path: inset(100%);
+	clip: rect(1px, 1px, 1px, 1px);
+	height: 1px;
+	overflow: hidden;
+	position: absolute;
+	white-space: nowrap;
+	width: 1px;
+    }
+
+    ins::before {
+	content: "((";
+    }
+
+    ins::after {
+	content: "))";
+    }
+    mark::before,
+mark::after {
+  clip-path: inset(100%);
+  clip: rect(1px, 1px, 1px, 1px);
+  height: 1px;
+  overflow: hidden;
+  position: absolute;
+  white-space: nowrap;
+  width: 1px;
+}
+
+mark::before {
+  content: " [highlight start] ";
+}
+
+mark::after {
+  content: " [highlight end] ";
+}
+dt::after {
+    content: ": ";
+}
+div[data-columns="3"] {
+    width: 400px;
+}
+div[data-columns="4"] {
+    width: 600px;
+}
+#electric-cars::before {
+    content: attr(data-parent);
+}
+      </style>
+
+  </head>
+  <body>
+
+    <p id="target">Drop Zone</p>
+    <script>
+      const target = document.getElementById("target");
+
+      // Cancel dragover so that drop can fire
+      target.addEventListener("dragover", (ev) => {
+	  ev.preventDefault();
+      });
+      target.addEventListener("drop", (ev) => {
+	  ev.preventDefault();
+	  const data = ev.dataTransfer.getData("text/plain");
+	  ev.target.append(data);
+      });
+    </script>
+  </body>
+</html>
+

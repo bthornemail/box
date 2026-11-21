@@ -1,0 +1,9 @@
+repetands=(1/7 1/73 123456789/999999999)
+echo $#repetands
+echo $repetands(1)
+echo $repetands(2)
+echo $repetands(3)
+echo 
+echo $#*
+echo $*
+cat '{bc 1+1}

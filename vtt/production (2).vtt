@@ -1,0 +1,60 @@
+WEBVTT - production: what is placed in ZIGUAROTH, and what waits
+
+NOTE
+One cue per item, one second long, in the order the items were settled; the time is the order, not a clock. The identifier names the item; the text says what it is, when, and where it lives. A cue that is replaced is not deleted: a later cue says what replaced it.
+
+catalog-wsn
+00:00:00.000 --> 00:00:01.000
+ZIGUAROTH/_CATALOG: 11 entries in WSN, YAML removed (values checked equal); INSERTION productions removed with _CODE/U/05.
+
+renders
+00:00:01.000 --> 00:00:02.000
+YHWH, ELOHIM, YHWH ELOHIM: _CODICES/YYYY|EEEE/.../&lt;term&gt;.wsn and _CODEX/YY|EE/.../&lt;term&gt; and &lt;term&gt;.wsn.
+
+euler-codex
+00:00:02.000 --> 00:00:03.000
+_CODEX/EE/EULER/euler and euler.wsn; SOURCES.md row: only the compiler grammar is used.
+
+template
+00:00:03.000 --> 00:00:04.000
+_TEMPLATES/term.html with slots (from Term Treemap.html); index.html pages the author moved into _CATALOG/YHWH, ELOHIM, YHWH/ELOHIM.
+
+configuration
+00:00:04.000 --> 00:00:05.000
+CONFIGURATION.yaml: rule P2 removed (66 rules); Y1 Y2 as the TIMELINE view; V1-V4 added; still YAML, as is VIEWS.yaml (views.js reads it).
+
+uncommitted
+00:00:05.000 --> 00:00:06.000
+Nothing committed in ZIGUAROTH or unbound since 2026-10-27. Waiting for the author: five scratch files from the interrupted template step (wsn/template.wsn, wsn/algol.wsn, in/template.txt, in/algol.txt, src/template.rc); SOURCES rows for the PL360 example and the B tutorial; the zkey.c comment.
+
+committed
+00:00:06.000 --> 00:00:07.000
+Replaces uncommitted: the five scratch files were committed by the author in unbound b7485f0. 2026-10-28 pushed: unbound main 7e81138 (stack element, logs, frame and key, text tracks, floor and Observer); boxedPINE main with proofs and types as submodules (2505658); omi-types a2726cc (OMI.WSN, OMI.Types); omi-canvas, polytron, meta-log-db their waiting commits. boxed: 5bb661f records types and meta-log-db, pushing.
+
+audit-contract
+00:00:07.000 --> 00:00:08.000
+unbound/PLAN9: zaudit.c, audit.rc and in/audit (the 138 records read from ~/devops/light-garden/audit) placed; the grammar and answers come out of Plan 9 as audit/audit.wsn and audit/answers.
+
+boxed-images
+00:00:08.000 --> 00:00:09.000
+boxed pushed (45f6001): 9legacy-qemu.img.bz2 (132 MB) taken out of the author's commit, kept on disk; it and plan9-usb.img.bz2 (242 MB) listed in .gitignore, both over GitHub's 100 MB limit.
+
+omi-dom-port
+00:00:09.000 --> 00:00:10.000
+The omi-dom port, 2026-10-28: 7 of 48 shared modules in Plan 9 (unbound/PLAN9/src), each checked against the module's own output: projective-swap-space (zpss; the turn is its even half), fano-7d-gate (zfano; its involution cannot fail), parallel-engine (zpe; compare-exchange, with proofs/proof.c's race fixed), polytope-cas (zpcas; a real linear involution, boxedPINE's three swaps summed), observer-sync (zobs; observers that read, with a falsifier), hit-zones-cues (wsn/vtttime.wsn; 145 invalid timestamps found), regex-constraints (wsn/g.wsn and zgrex; 6 constraints are not context-free). 41 remain; github omi-dom main holds both of Grok's versions (e1e379c) and awaits every selfTest (614b39e).
+
+omi-dom-port-9
+00:00:10.000 --> 00:00:11.000
+The omi-dom port, 2026-10-28: 9 of 48 shared modules in Plan 9, with polytope-9d-inject and polytope-10d-infer (zpoly): the polytope tower is two algebras, an involution at 8 bits and an order-6 map at 10, and at 11 bits apply10 is not a permutation. 39 remain; next system-probe, then worker-barrier.
+
+omi-dom-port-11
+00:00:11.000 --> 00:00:12.000
+The omi-dom port, 2026-10-28: 11 of 48 shared modules in Plan 9, with system-probe (zprobe; its health was a constant) and worker-barrier (zbar; a real barrier, raced, with a falsifier). 37 remain.
+
+omi-dom-port-12
+00:00:12.000 --> 00:00:13.000
+The omi-dom port, 2026-10-28: 12 of 48 shared modules, with constraint-pipeline (zpipe; its text and binary paths read the same bytes differently, and admissible cannot be false). 36 remain. The I-series (proofs/js-docs/JS-PROOF-INDEX.md, 118 records, in WSN as wsn/js/catalog) is the ground each port cites, not re-proves.
+
+omi-dom-port-14
+00:00:13.000 --> 00:00:14.000
+The omi-dom port, 2026-10-28: 14 of 48 shared modules, with prolog-resolve (resolve.rc, rc and zver.c; ePIPE cannot match) and contrasting-orchestrator (zorch; on even-degree graphs its loop cannot move the digest). 34 remain.

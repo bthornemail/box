@@ -1,0 +1,40 @@
+digraph G {
+    a -> b -> c -> d -> e -> f -> g -> h -> i -> j -> k -> l -> m -> n -> o -> p -> q -> r -> s -> t -> u -> v -> w -> x -> y -> z
+    /* echo {d..w}" -> z" | fold -w 7 */
+    /* Basic form */
+
+    /* According to Polybius' Histories, the device was invented by Cleoxenus and Democleitus, and further developed by Polybius himself. The device partitioned the alphabet into five tablets with five letters each (except for the last one with only four). There are no surviving tablets from antiquity. Letters are represented by two numbers from one to five, allowing the representation of 25 characters using only 5 numeric symbols.
+    */
+    /* The original square used the Greek alphabet laid out as follows: */
+
+    01 ->	02  ->	03 ->	04 ->	05
+    01 ->	Α ->	Β ->	Γ ->	Δ ->	Ε
+    02 ->	Ζ ->	Η ->	Θ ->	Ι ->	Κ
+    03 ->	Λ ->	Μ ->	Ν ->	Ξ ->	Ο
+    04 ->	Π ->	Ρ ->	Σ ->	Τ ->	Υ
+    05 ->	Φ ->	Χ ->	Ψ ->	Ω -> NULL	
+    /* Modern Greek still uses that same alphabet, as do implementations of the Polybius square in that language. */
+
+    /* With the Latin alphabet, this is the typical form:[citation needed] */
+
+    10 ->	20 ->	30 ->	40 ->	50
+    10 ->	A ->	B ->	C ->	D ->	E
+    20 ->	F ->	G ->	H ->	{I J} -> K
+    30 ->	L ->	M ->	N ->	O ->	P
+    40 ->	Q ->	R ->	S ->	T ->	U
+    50  ->	V ->	W ->	X ->	Y ->	Z
+    /* This alphabet, and this latter form of the Polybius square, is used when implementing the square in other Western European languages such as English, Spanish, French, German, Italian, Portuguese, and Dutch. */
+
+    /*
+    00 -> 01 -> 10 -> 11
+    00 -> 02 -> 20 -> 22
+    00 -> 03 -> 30 -> 33
+    00 -> 04 -> 40 -> 44
+    00 -> 05 -> 50 -> 55
+    */
+    0 -> 1 -> 2 -> 3 -> 4 -> 5
+    00 -> 11 -> 22 -> 33 -> 44 -> 55
+    000 -> 111 -> 222 -> 333 -> 444 -> 555
+    0000 -> 1111 -> 2222 -> 3333 -> 4444 -> 5555
+    00000 -> 11111 -> 22222 -> 33333 -> 44444 -> 55555
+}

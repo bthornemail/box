@@ -1,0 +1,44 @@
+<html>
+  <head>
+    <script src="//cdn.jsdelivr.net/npm/eruda"></script>
+    <script>eruda.init();</script></head>
+  <body>
+<img
+  class="spaceship cruiserX3"
+  src="shipX3.png"
+  data-ship-id="324"
+  data-weapons="laserI laserII"
+  data-shields="72%"
+  data-x="414354"
+  data-y="85160"
+  data-z="31940" />
+<img
+  class="spaceship cruiserX3"
+  src="shipX3.png"
+  data-ship-id="325"
+  data-weapons="laserI laserII"
+  data-shields="76%"
+  data-x="413354"
+  data-y="85460"
+  data-z="31440" />
+<img
+  class="spaceship cruiserX3"
+  src="shipX3.png"
+  data-ship-id="326"
+  data-weapons="laserI laserII"
+  data-shields="35%"
+  data-x="415354"
+  data-y="85560"
+  data-z="31540" />
+</body>
+</html>
+<noscript>
+  function clickSpaceship() {
+      alert('blasted' + this.dataset.shipId)
+  spaceships[this.dataset.shipId].blasted();
+}
+
+document.querySelectorAll("img.spaceship").forEach((ship) => {
+  ship.addEventListener("click", clickSpaceship);
+});
+</noscript>

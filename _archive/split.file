@@ -1,0 +1,4 @@
+echo "enter filename";
+read filename
+split -a 4 -b 16 -d -e $filename node-
+

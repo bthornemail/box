@@ -1,0 +1,19 @@
+# Custom Terminal Prompt (PS1)
+PS1='\[\e[0;32m\]\w\[\e[0m\] \[\e[0;97m\]\$\[\e[0m\] '
+
+# Package Management Shortcuts
+alias update="pkg update && pkg upgrade"
+alias install="pkg install"
+
+# Navigation & Directory Listing Shortcuts
+alias ..="cd .."
+alias ...="cd ../.."
+alias ll="ls -la"
+alias la="ls -A"
+
+# Quality of Life Aliases
+alias grep="grep --color=auto"
+alias cls="clear"
+
+# Ensure custom local binaries are in your PATH
+export PATH="$HOME/bin:$PATH"

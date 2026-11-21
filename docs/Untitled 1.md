@@ -1,0 +1,10 @@
+Most of Aristotle's work is probably not in its original form, because it was most likely edited by students and later lecturers. The logical works of Aristotle were compiled into a set of six books called the _[Organon](https://en.wikipedia.org/wiki/Organon "Organon")_ around 40 BC by [Andronicus of Rhodes](https://en.wikipedia.org/wiki/Andronicus_of_Rhodes "Andronicus of Rhodes") or others among his followers.[[49]](https://en.wikipedia.org/wiki/Aristotle#cite_note-FOOTNOTEPickover200952-54) The books are:
+
+1. _[Categories](https://en.wikipedia.org/wiki/Categories_\(Aristotle\) "Categories (Aristotle)")_
+2. _[On Interpretation](https://en.wikipedia.org/wiki/On_Interpretation "On Interpretation")_
+3. _[Prior Analytics](https://en.wikipedia.org/wiki/Prior_Analytics "Prior Analytics")_
+4. _[Posterior Analytics](https://en.wikipedia.org/wiki/Posterior_Analytics "Posterior Analytics")_
+5. _[Topics](https://en.wikipedia.org/wiki/Topics_\(Aristotle\) "Topics (Aristotle)")_
+6. _[On Sophistical Refutations](https://en.wikipedia.org/wiki/On_Sophistical_Refutations "On Sophistical Refutations")_
+
+The order of the books (or the teachings from which they are composed) is not certain, but this list was derived from analysis of Aristotle's writings. It goes from the basics, the analysis of simple terms in the _Categories_, the analysis of propositions and their elementary relations in _On Interpretation_, to the study of more complex forms, namely, syllogisms and demonstration (in the _Analytics_)[[50]](https://en.wikipedia.org/wiki/Aristotle#cite_note-FOOTNOTEPrior_Analytics24b18%E2%80%9320-55)[[51]](https://en.wikipedia.org/wiki/Aristotle#cite_note-FOOTNOTEBobzien2015-56) and dialectics (in the _Topics_ and _Sophistical Refutations_). The first three treatises form the core of the logical theory _stricto sensu_: the grammar of the language of logic and the correct rules of reasoning. The _Rhetoric_ is not conventionally included, but it states that it relies on the _Topics_.[[52]](https://en.wikipedia.org/wiki/Aristotle#cite_note-FOOTNOTESmith2017-57)

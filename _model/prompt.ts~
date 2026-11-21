@@ -1,0 +1,112 @@
+import { writeFile } from 'node:fs';
+import { Buffer } from 'node:buffer';
+export default function prompt(data: Buffer[]) {
+    const space = Buffer.allocUnsafe(65536).fill(0);
+    const domain = space.subarray(0, 512);
+    const dimension = space.subarray(0, 128); //4330
+
+    const ruler = space.subarray(0, 64);//1096 / 18 =60.88888... | /44=24.909090... | /8=137 | /4=274
+    const orbit = space.subarray(0, 60);//970
+    const cycle = space.subarray(0, 48);//640
+    const proof = space.subarray(0, 40);//420
+    const parity = space.subarray(0, 36);//342
+    const rule = space.subarray(0, 32);//272
+
+    const role0 = space.subarray(0, 30);//240
+    const role1 = space.subarray(0, 28);//210
+    const role2 = space.subarray(0, 26);//182
+    const role3 = space.subarray(0, 24);//156
+    const role4 = space.subarray(0, 22);//132
+    const role5 = space.subarray(0, 20);//110
+    const role6 = space.subarray(0, 18);//90
+    // 0d72n
+    const role = space.subarray(0, 16); //72
+    const declaration = space.subarray(0, 14); //56
+    const definition = space.subarray(0, 12); //42
+
+    // 0d30n
+    const exponent = space.subarray(0, 10); //30
+    const exception = space.subarray(0, 8); //20
+
+    const point = space.subarray(0, 6); //12
+    const index = space.subarray(0, 4); //6
+    const node = space.subarray(0, 2);
+
+    for (let i = 0; i < dimension.length; i++) {
+        const degrees = 60;
+        const code128 = String.fromCharCode(i % 128);
+        const code64 = String.fromCharCode(i % 64);
+        const code48 = String.fromCharCode(i % 48);
+        const code32 = String.fromCharCode(i % 32);
+        const code60 = String.fromCharCode((i % 64) ^ degrees);
+        switch ((i % 9) ^ (i % 10)) {
+            case 1:
+                console, log`@:${i % 9) ^ (i % 10) ^ (i % 11)
+        }`;
+                console.log(`i${ i } = ((i % 9= ${ i % 9 }) ^ (i % 10=${ i % 10 }) ^ (i % 11=${ i % 11 })`);
+
+                break;
+        }
+        /*        switch (i % 4) {
+                    case 3:
+                        Atomics.compareExchange(space, 2, 0, 1);
+                        console.log("case 3",
+                            code128.charCodeAt(0), {
+                            code128,
+                            code64,
+                            code60,
+                            code48,
+                            code32
+                        });
+                        break;
+                    case 2:
+                        console.log("case 2",
+                            code128.charCodeAt(0), {
+                            code128,
+                            code64,
+                            code60,
+                            code48,
+                            code32
+                        });
+                        break;
+                    case 1:
+                        console.log("case 1",
+                            code128.charCodeAt(0), {
+                            code128,
+                            code64,
+                            code60,
+                            code48,
+                            code32
+                        });
+                        break;
+                    case 0:
+                        console.log("case 0",
+                            code128.charCodeAt(0), {
+                            code128,
+                            code64,
+                            code60,
+                            code48,
+                            code32
+                        });
+                        break;
+                    default:
+                        console.log("case default",
+                            code128.charCodeAt(0), {
+                            code128,
+                            code64,
+                            code60,
+                            code48,
+                            code32
+                        });
+                        }
+                        */
+    }
+    //    const data = new Uint8Array(Buffer.from('Hello Node.js'));
+    writeFile('space.json', new Uint8Array(space), (err) => {
+        if (err) throw err;
+        console.log('The file has been saved!');
+    });
+}
+const A = new Array(128);
+A.map((_, i) => Buffer.allocUnsafe(512).fill(i))
+prompt(A)

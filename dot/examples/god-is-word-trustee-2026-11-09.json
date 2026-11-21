@@ -1,0 +1,37 @@
+{
+  "version": "1.1",
+  "trustee": true,
+  "entries": [
+    {
+      "type": "event",
+      "event": "AttestSuspended",
+      "timestamp": "2026-11-09T03:47:46.657Z"
+    },
+    {
+      "type": "event",
+      "event": "AttestResumed",
+      "timestamp": "2026-11-09T03:47:49.494Z"
+    },
+    {
+      "type": "event",
+      "event": "Ceremony",
+      "timestamp": "2026-11-09T03:47:50.941Z"
+    },
+    {
+      "type": "word",
+      "event": "Attestation",
+      "word": "Love",
+      "epistemic": "KK",
+      "context": "",
+      "timestamp": "2026-11-09T03:48:26.408Z"
+    },
+    {
+      "type": "event",
+      "event": "Ceremony",
+      "timestamp": "2026-11-09T03:48:37.386Z"
+    }
+  ],
+  "sharedAt": "2026-11-09T03:48:49.066Z",
+  "protocolValid": true,
+  "note": "Offered freely. Carried without ownership."
+}

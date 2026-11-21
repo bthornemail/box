@@ -1,0 +1,196 @@
+<html>
+  <head>
+    <script src="//cdn.jsdelivr.net/npm/eruda"></script>
+    <script>eruda.init();</script>
+    <base target="_top" href="https://example.com/" />
+  </head>
+  <body>
+    <img
+      id="my-img"
+  class="spaceship cruiserX3"
+  src="shipX3.png"
+  data-ship-id="324"
+  data-weapons="laserI laserII"
+  data-shields="72%"
+  data-x="414354"
+  data-y="85160"
+  data-z="31940" />
+<img
+  class="spaceship cruiserX3"
+  src="shipX3.png"
+  data-ship-id="325"
+  data-weapons="laserI laserII"
+  data-shields="76%"
+  data-x="413354"
+  data-y="85460"
+  data-z="31440" />
+<img
+  class="spaceship cruiserX3"
+  src="shipX3.png"
+  data-ship-id="326"
+  data-weapons="laserI laserII"
+  data-shields="35%"
+  data-x="415354"
+  data-y="85560"
+  data-z="31540" />
+</body>
+</html>
+<script>
+  function clickSpaceship() {
+      alert('blasted' + this.dataset.shipId)
+  spaceships[this.dataset.shipId].blasted();
+}
+
+document.querySelectorAll("img.spaceship").forEach((ship) => {
+  ship.addEventListener("click", clickSpaceship);
+});
+  class PopupInfo extends HTMLElement {
+  constructor() {
+    super();
+  }
+  // Element functionality written in here
+  }
+  // Create a class for the element
+class MyCustomElement extends HTMLElement {
+  static observedAttributes = ["color", "size"];
+
+  constructor() {
+    // Always call super first in constructor
+    super();
+  }
+
+  connectedCallback() {
+    console.log("Custom element added to page.");
+  }
+
+  disconnectedCallback() {
+    console.log("Custom element removed from page.");
+  }
+
+  connectedMoveCallback() {
+    console.log("Custom element moved with moveBefore()");
+  }
+
+  adoptedCallback() {
+    console.log("Custom element moved to new page.");
+  }
+  attributeChangedCallback(name, oldValue, newValue) {
+      console.log(
+	  `Attribute ${name} has changed from ${oldValue} to ${newValue}.`,
+      );
+  }
+}
+
+customElements.define("my-custom-element", MyCustomElement);
+</script>
+
+<p is="word-count"></p>
+customElements.define("word-count", WordCount, { extends: "p" });
+<my-custom-element>
+  <!-- content of the element -->
+</my-custom-element>
+
+const myRegistry = new CustomElementRegistry();
+
+myRegistry.define(
+  "my-element",
+  class extends HTMLElement {
+    connectedCallback() {
+      this.textContent = "Hello from scoped registry!";
+    }
+  },
+);
+
+const shadow = host.attachShadow({
+  mode: "open",
+  customElementRegistry: null, // no registry yet
+});
+shadow.innerHTML = "<my-element></my-element>";
+
+// Later, associate the scoped registry and upgrade elements
+myRegistry.initialize(shadow);
+
+<my-host>
+  <template shadowrootmode="open" shadowrootcustomelementregistry>
+    <my-element></my-element>
+  </template>
+</my-host>
+
+class MyCustomElement extends HTMLElement {
+  constructor() {
+    super();
+    this._internals = this.attachInternals();
+  }
+
+  get collapsed() {
+    return this._internals.states.has("hidden");
+  }
+
+  set collapsed(flag) {
+    if (flag) {
+      // Existence of identifier corresponds to "true"
+      this._internals.states.add("hidden");
+    } else {
+      // Absence of identifier corresponds to "false"
+      this._internals.states.delete("hidden");
+    }
+  }
+}
+
+// Register the custom element
+customElements.define("my-custom-element", MyCustomElement);
+
+const popover = document.getElementById("mypopover");
+const toggleBtn = document.getElementById("toggleBtn");
+
+toggleBtn.commandForElement = popover;
+
+<button commandfor="mypopover" command="toggle-popover">
+  Toggle the popover
+</button>
+<div id="mypopover" popover>
+  <button commandfor="mypopover" command="hide-popover">Close</button>
+  Popover content
+</div>
+
+<button commandfor="mydialog" command="show-modal">Show modal dialog</button>
+<dialog id="mydialog">
+  <button commandfor="mydialog" command="close">Close</button>
+  Dialog Content
+</dialog>
+
+<button commandfor="my-img" command="--rotate-left">Rotate left</button>
+<button commandfor="my-img" command="--rotate-right">Rotate right</button>
+<img id="my-img" src="photo.jpg" alt="[add appropriate alt text here]" />
+
+<script>
+const myImg = document.getElementById("my-img");
+
+myImg.addEventListener("command", (event) => {
+  if (event.command === "--rotate-left") {
+    myImg.style.rotate = "-90deg";
+  } else if (event.command === "--rotate-right") {
+    myImg.style.rotate = "90deg";
+  }
+});
+</script>
+<style>
+  ins::before,
+ins::after {
+  clip-path: inset(100%);
+  clip: rect(1px, 1px, 1px, 1px);
+  height: 1px;
+  overflow: hidden;
+  position: absolute;
+  white-space: nowrap;
+  width: 1px;
+}
+
+ins::before {
+  content: " [insertion start] ";
+}
+
+ins::after {
+  content: " [insertion end] ";
+}
+</style>
