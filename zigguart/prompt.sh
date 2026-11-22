@@ -67,6 +67,7 @@ function prompt {
     echo "<${sounds[yah]} world>"
     unset sounds[yah]  # Delete yah
 }
+# nc -p 3456 -l
 
 prompt "Brian"
 
@@ -76,8 +77,4 @@ echo $((count + 200))      # Add 200 to $a
 echo $((RANDOM * count % 200))  # Random number 0..199
 
 
-# loop on myfunc output lines
-# hile IFS= read -r line; do
-#  echo "$line"
-# done < <(<<< "Will be uppercased, even $variable")
 IFS=$'\n\t'

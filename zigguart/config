@@ -1,9 +1,0 @@
-hello world
-source=./dot
-target=./images
-alef=alef
-ziggurat=ziggurat
-ziguaroth=ziguaroth
-# Define the list (array)
-image_types=("svg" "png" "gif")
-map_types=("imap" "cmap")
