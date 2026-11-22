@@ -5,7 +5,10 @@ body {
     width:100%;
     height:100%;
 }
-
+.root-page{
+    width:100%;
+    height:100%;
+}
 .blueprint-grid {
     background-color: #0f172a;
     background-image:

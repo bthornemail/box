@@ -9,29 +9,29 @@
 <g id="page0,1_graph0" class="graph" transform="scale(1 1) rotate(0) translate(4 536)">
 <title>Ziguaroth</title>
 <polygon fill="white" stroke="transparent" points="-4,4 -4,-536 554,-536 554,4 -4,4"/>
-<g id="clust2" class="cluster">
-<title>cluster_types</title>
-<polygon fill="none" stroke="black" points="0,0 0,-532 550,-532 550,0 0,0"/>
+<g id="clust1" class="cluster">
+<title>cluster_terms</title>
+<polygon fill="none" stroke="black" points="112,-96 112,-436 494.49,-436 494.49,-96 112,-96"/>
 </g>
 <g id="clust3" class="cluster">
 <title>cluster_pips</title>
 <polygon fill="none" stroke="black" points="144.7,-132.07 144.7,-380.81 413.11,-380.81 413.11,-132.07 144.7,-132.07"/>
 </g>
-<g id="clust5" class="cluster">
-<title>cluster_aegean_pips</title>
-<polygon fill="none" stroke="black" points="144.7,-132.07 144.7,-380.81 413.11,-380.81 413.11,-132.07 144.7,-132.07"/>
+<g id="clust2" class="cluster">
+<title>cluster_types</title>
+<polygon fill="none" stroke="black" points="0,0 0,-532 550,-532 550,0 0,0"/>
 </g>
 <g id="clust6" class="cluster">
 <title>cluster_braille_blips</title>
 <polygon fill="none" stroke="black" points="72,-104 72,-348.29 331.61,-348.29 331.61,-104 72,-104"/>
 </g>
-<g id="clust1" class="cluster">
-<title>cluster_terms</title>
-<polygon fill="none" stroke="black" points="112,-96 112,-436 494.49,-436 494.49,-96 112,-96"/>
-</g>
 <g id="clust4" class="cluster">
 <title>cluster_blips</title>
 <polygon fill="none" stroke="black" points="72,-104 72,-348.29 331.61,-348.29 331.61,-104 72,-104"/>
+</g>
+<g id="clust5" class="cluster">
+<title>cluster_aegean_pips</title>
+<polygon fill="none" stroke="black" points="144.7,-132.07 144.7,-380.81 413.11,-380.81 413.11,-132.07 144.7,-132.07"/>
 </g>
 <!-- dominoes -->
 <g id="node1" class="node">

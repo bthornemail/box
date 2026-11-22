@@ -1,21 +1,51 @@
-/*
-New Graph
-*/
-digraph Ziggurat {
-    layout=neato
-    size=<width=640;height=48;>
-    margin=8
-    dim=10
-    dimen=10
-    overlap=scale
-    rankdir=BT
-    start=<datetime>
-    bgcolor=transparent;
-    
-    node [label=<00F\N>;style=filled;color=<lightblue:lightgrey>;bgcolor=<lightblue:lightgrey>;];
-    edge [label=<\E>;color=<lightblue:lightgrey>;]
-	
-    subgraph nibur {
+
+digraph Ziguaroth {
+    center = true;
+
+subgraph Types {
+        rank = same;
+        0;
+        1;
+        2;
+        3;
+        4;
+        5;
+        6;
+        7;
+        8;
+        9;
+    }
+    subgraph Types2 {
+        rank = same;
+        A;
+        B;
+        C;
+        D;
+        E;
+        F;
+        G;
+        H;
+        I;
+        J;
+        K;
+        L;
+        M;
+        N;
+        O;
+        P;
+        Q;
+        R;
+        S;
+        T;
+        U;
+        V;
+        W;
+        X;
+        Y;
+        Z;
+    }
+}
+    digraph nibur {
 	node [label=<n=\N>;style=filled;color=<brown:grey>;bgcolor=<brown:grey>;];
 	edge [label=<\E>;color=<brown:grey>;]
 
@@ -28,7 +58,7 @@ digraph Ziggurat {
 	<00> [label=<n²>;]
 	<0> [label=<n¹>;]
     }
-    subgraph apex {
+    digraph apex {
 	node [label=<n=\N>;style=filled;color=<grey:brown>;bgcolor=<grey:brown>;];
 	edge [label=<\E>;color=<grey:brown>;]
 	
@@ -42,7 +72,7 @@ digraph Ziggurat {
 	<1> [label=<2¹>;]
     }
     
-    subgraph cluster_Omega {
+    digraph cluster_Omega {
 	style=filled;
 	bgcolor=<#00000078>;
 	node [label=<n=\N>;style=filled;color=<pink:purple>;bgcolor=<pink:purple>;];
@@ -58,8 +88,35 @@ digraph Ziggurat {
 	<AAAA> -> <ZZZZ>
     }
 
+    digraph cluster_Zeta {
+	style=filled;
+	bgcolor=<#78000078>;
+	node [style=filled;color=<pink:purple>;bgcolor=<pink:purple>;];
+	edge [color=<pink:purple>;]
+	// 2⁵
+	00000 -> { 00001 -> { 00010 -> { 00011 -> {
+	    00100 -> { 00101 -> { 00110 -> { 00111 -> {
+		01000 -> { 01001 -> { 01010 -> { 01011 -> {
+		    01100 -> { 01101 -> { 01110 -> { 01111 -> {
+			11100 -> { 11101 -> { 11110 -> { 111111 }}}}}}}}}}}}}}}}}}}
+			
+	// 2⁴
+	0000 -> { 0001 -> { 0010 -> { 0011 -> {
+	    0100 -> { 0101 -> { 0110 -> { 0111 -> {
+		1000 -> { 1001 -> { 1010 -> { 1011 -> {
+		    1100 -> { 1101 -> { 1110 -> { 1111 }}}}}}}}}}}}}}}
+	// 2³
+	000 -> { 001 -> { 010 -> { 011 -> {
+	    100 -> { 101 -> { 110 -> { 111}}}}}}}
+	// 2²
+	00 -> { 01 -> {
+	    10 -> { 11 }}}
+	// 2¹
+	0 -> {
+	    1 } 
+    }
     
-    subgraph Alef {
+    digraph Alef {
 	node [label=<n=\N>;style=filled;color=<red:blue>;bgcolor=<red:blue>;]
 	edge [label=<\E>;color=<red:blue>;]	
 
@@ -576,7 +633,7 @@ digraph Ziggurat {
 	<0> -> <11> -> <111> -> <1110>; 
 	<0> -> <11> -> <111> -> <1111>;
     }
-    subgraph Beta {
+    digraph Beta {
 	node [label=<n=\N>;style=filled;color=<yellow:green>;bgcolor=<yellow:green>;]
 	edge [label=<\E>;color=<yellow:green>]	
 	<1> -> <00> -> <000> -> <0000>; 
@@ -1092,61 +1149,35 @@ digraph Ziggurat {
 	<1> -> <11> -> <111> -> <1110>; 
 	<1> -> <11> -> <111> -> <1111>;
     }
+	/*
+New Graph
+*/
+digraph Ziggurat {
+    layout=neato
+    size=<width=640;height=48;>
+    margin=8
+    dim=10
+    dimen=10
+    overlap=scale
+    rankdir=BT
+    start=<datetime>
+    bgcolor=transparent;
+    
+    node [label=<00F\N>;style=filled;color=<lightblue:lightgrey>;bgcolor=<lightblue:lightgrey>;];
+    edge [label=<\E>;color=<lightblue:lightgrey>;]
+	
 }
 /*
 New Graph
 */
-digraph Ziguaroth {
-    center = true;
-    subgraph cluster_terms {
+
+    digraph Terms {
         dominoes;
         aegean;
         braille;
         rubix;
     }
-    subgraph cluster_types {
-        rank = same;
-        0;
-        1;
-        2;
-        3;
-        4;
-        5;
-        6;
-        7;
-        8;
-        9;
-    }
-    subgraph cluster_types {
-        rank = same;
-        A;
-        B;
-        C;
-        D;
-        E;
-        F;
-        G;
-        H;
-        I;
-        J;
-        K;
-        L;
-        M;
-        N;
-        O;
-        P;
-        Q;
-        R;
-        S;
-        T;
-        U;
-        V;
-        W;
-        X;
-        Y;
-        Z;
-    }
-    subgraph cluster_pips {
+    digraph Pips {
         // echo subgraph cluster_pips { rank=same\; {0..2}{0..4}{0..8}\; }
         rank = same;
         000;
@@ -1285,7 +1316,7 @@ digraph Ziguaroth {
         247;
         248;
     }
-    subgraph cluster_blips {
+    digraph Blips {
         // echo subgraph cluster_blips { rank=same\; {0..1}{0..5}{0..7}\; }
         rank = same;
         000;
@@ -1386,7 +1417,7 @@ digraph Ziguaroth {
         157;
     }
     
-    subgraph cluster_aegean_pips {
+    digraph Aegean_pips {
         // echo subgraph cluster_aegean { rank=same\; {0..2}{0..4}{0..8}\ \-\>\ {3,5,9}\; }
         rank = same;
         000 -> 3;
@@ -1797,7 +1828,7 @@ digraph Ziguaroth {
     }
     
     
-    subgraph cluster_braille_blips {
+    digraph Braille_blips {
         rank = same;
         000 -> 2;
         000 -> 6;
@@ -2088,5 +2119,3 @@ digraph Ziguaroth {
         157 -> 6;
         157 -> 8;
     }
-}
-

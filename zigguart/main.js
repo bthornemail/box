@@ -2,23 +2,12 @@
 import { applyChanges, getChanges } from "../src/node.js";
 import { template } from "../src/template/templates.js";
 import { getPointer } from "../src/pointer.events.js";
-async function loadSVGElement(url, containerId) {
-    const response = await fetch(url);
-    const svgText = await response.text();
+import loadSVGElement from "./core/load_svg_element.js";
 
-    const parser = new DOMParser();
-    const doc = parser.parseFromString(svgText, 'image/svg+xml');
-    const svgElement = doc.querySelector('svg');
-
-    // Example: Modify an attribute before appending
-    svgElement.setAttribute('class', 'custom-svg-class');
-    document.getElementById(containerId).appendChild(svgElement);
-}
 loadSVGElement("images/ziggurat.dot.svg", "root").then(() => {
     const nodes = document.querySelectorAll(".node");
     for (const node of nodes) {
         console.log(node.id);
-
         getPointer(node)
         /*
         node.addEventListener("click", (e) => {

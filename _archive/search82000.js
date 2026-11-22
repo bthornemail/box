@@ -161,13 +161,14 @@ function search01(bases, initial_guess, max_guess=null, cached_digit_depth=100) 
 }
 
 // Find 82000.
-let solution = search01([3,4,5], 2);
+// let solution = search01([3,4,5], 2);
 // Find 82005.
-//let solution = search01([4,5], 82002);
+// let solution = search01([4,5], 82002);
+
 
 // Search a little farther.
-//let solution = search01([3,4,5], 82001, 10n**30000n, 35);
-//let solution = search01([4,5], 82006, 10n**20000n, 133);
+// let solution = search01([3,4,5], 82001, 10n**30000n, 35);
+// let solution = search01([4,5], 82006, 10n**20000n, 133);
 
 // Search a lot farther (no limit).
 //let solution = search01([3,4,5], 82001, null, 155);

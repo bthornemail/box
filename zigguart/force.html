@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <style>
+        body {
+            margin: 0;
+        }
+    </style>
+
+    <script src="//cdn.jsdelivr.net/npm/3d-force-graph"></script>
+    <!--<script src="../../dist/3d-force-graph.js"></script>-->
+</head>
+
+<body>
+    <div id="3d-graph"></div>
+    <div style="position: absolute; top: 5px; right: 5px;">
+        <button id="animationToggle" style="margin: 8px; height: 25px; width: 150px;">
+            Pause Animation
+        </button>
+        <button id="rotationToggle" style="margin: 8px; height: 25px; width: 150px;">
+            Pause Rotation
+        </button>
+    </div>
+    <div id="root"></div>
+
+    <script src="model.js" type="module"></script>
+</body>
+
+</html>
