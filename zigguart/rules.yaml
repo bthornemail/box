@@ -1,0 +1,21 @@
+To safely satisfy these needs, four domain names are reserved as
+   listed and described below.
+
+                   .test
+                .example
+                .invalid
+              .localhost
+
+      ".test" is recommended for use in testing of current or new DNS
+      related code.
+
+      ".example" is recommended for use in documentation or as examples.
+
+      ".invalid" is intended for use in online construction of domain
+      names that are sure to be invalid and which it is obvious at a
+      glance are invalid.
+
+      The ".localhost" TLD has traditionally been statically defined in
+      host DNS implementations as having an A record pointing to the
+      loop back IP address and is reserved for such use.  Any other use
+      would conflict with widely deployed code which assumes this use.

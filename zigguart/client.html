@@ -1,0 +1,63 @@
+<html>
+
+  <head>
+    <script src="//cdn.jsdelivr.net/npm/eruda"></script>
+    <script>eruda.init();</script>
+    <link rel="stylesheet" href="styles.css">
+  </head>
+
+  <body class="dot-grid-24">
+    <img src="images/ziguaroth.gif" usemap="#ziguaroth"   alt="350 x 150 picture of two parrots"
+srcset="clock-demo-200px.png 200w, clock-demo-400px.png 400w"
+	 sizes="(width <= 600px) 200px, 50vw"
+	 />
+    <!-- When the (width <= 600px) media condition matches, the 200 pixel-wide image will load (it is the one that matches 200px most closely), otherwise the other image will load. -->
+    <p> <b>content of x.map</b> </p>
+    <map id="ziguaroth" name="ziguaroth">
+      <!-- Ziguaroth Polybius -->
+      <area
+	shape="circle"
+	coords="75,75,75"
+	target="_blank"
+	href="left.html"
+	alt="Click to go Left" />
+      <area
+	shape="circle"
+	coords="275,75,75"
+	target="_blank"
+	href="right.html"
+	alt="Click to go Right" />
+    </map>
+    <script>
+      if ('WebSocket' in window) {
+	  (function() {
+	      function refreshCSS() {
+		  var sheets = [].slice.call(document.getElementsByTagName("link"));
+		  var head = document.getElementsByTagName("head")[0];
+		  for (var i = 0; i < sheets.length; ++i) {
+		      var elem = sheets[i];
+		      head.removeChild(elem);
+		      var rel = elem.rel;
+		      if (elem.href && typeof rel != "string" || rel.length == 0 || rel.toLowerCase() == "stylesheet") {
+			  var url = elem.href.replace(/(&|\?)_cacheOverride=\d+/, '');
+			  elem.href = url + (url.indexOf('?') >= 0 ? '&' : '?') + '_cacheOverride=' + (new Date().valueOf());
+		      }
+		      head.appendChild(elem);
+		  }
+	      }
+	      var protocol = window.location.protocol === 'http:' ? 'ws://' : 'wss://';
+	      var address = protocol + window.location.host + window.location.pathname + '/ws';
+	      var socket = new WebSocket(address);
+	      socket.onmessage = function(msg) {
+		  console.log(msg)
+		  //		if (msg.data == 'reload') window.location.reload();
+		  //		else if (msg.data == 'refreshcss') refreshCSS();
+	      };
+	      console.log('Live reload enabled.');
+	  })();
+      }
+
+    </script>
+  </body>
+
+</html>

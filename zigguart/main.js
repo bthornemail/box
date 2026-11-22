@@ -14,13 +14,9 @@ async function loadSVGElement(url, containerId) {
     svgElement.setAttribute('class', 'custom-svg-class');
     document.getElementById(containerId).appendChild(svgElement);
 }
-loadSVGElement("images/ziggurat.dot.svg", "root").then(() => {
-    const nodes = document.querySelectorAll(".node");
+export async function joinAndCompose(nodes){
     for (const node of nodes) {
         console.log(node.id);
-
-        getPointer(node)
-        /*
         node.addEventListener("click", (e) => {
             e.preventDefault();
             const confirm = window.confirm(`Would you like to modify:\n${node.id}`);
@@ -31,6 +27,12 @@ loadSVGElement("images/ziggurat.dot.svg", "root").then(() => {
             const hasChanged = applyChanges(prompt, tags);
             alert(`Changes ${hasChanged ? "applied" : "not applied"} to ${tags}.`);
         });
-        */
+    }
+}
+loadSVGElement("images/ziggurat.dot.svg", "root").then(() => {
+    const nodes = document.querySelectorAll(".node");
+    joinAndCompose(nodes);
+    for (const node of nodes) {
+        getPointer(node);
     }
 });
