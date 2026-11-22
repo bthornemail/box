@@ -6,3 +6,5 @@ HTTP/1.1 206 Partial content
        Content-Range: bytes 21010-47021/47022
        Content-Length: 26012
        Content-Type: image/gif
+
+-record(person, {name, age, phone = [], dict = []}).

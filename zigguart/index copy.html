@@ -1,0 +1,113 @@
+<!doctype html>
+<html prefix="og:https://localhost/#" lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta property="og:title" content="Ziggurat of Ziguaroth" />
+    <meta property="og:type" content="video.movie" />
+    <meta property="og:url" content="https://localhost/" />
+    <meta property="og:image" content="https://localhost/images/alef.gif" />
+    <link rel="stylesheet" href="reset.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Geist+Mono:wght@100..900&family=Geist:wght@100..900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <!-- <script src="//cdn.jsdelivr.net/npm/eruda"></script>
+    <script>
+        eruda.init();
+    </script> -->
+    <title>Ziggurat of Ziguaroth</title>
+
+</head>
+
+<body class="dot-grid-24"
+    style="display: flex; flex-direction: column; justify-content: space-between; align-items: center;">
+    <nav>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="client.html">Client</a></li>
+            <li><a href="server.html">Server</a></li>
+            <li><a href="system.html">System</a></li>
+        </ul>
+    </nav>
+    <header>
+        <ruby>
+            Text before
+            <!-- Valid: ins can be inside ruby, and rt can be inside ruby -->
+            <ins>Inserted text</ins>
+            <rt>Pronunciation</rt>
+            <!-- Valid: rt can be inside ruby, and ins can be inside rt -->
+            <rt><ins>Pronunciation</ins></rt>
+        </ruby>
+    </header>
+    <main>
+        <section>
+            <p hidden>
+                ⛔ Your browser doesn't support <code>shadowrootmode</code> attribute yet.
+            </p>
+            <article>
+                <style>
+                    p {
+                        padding: 8px;
+                        background-color: wheat;
+                    }
+                </style>
+                <p>I'm in the DOM.</p>
+                <table id="producttable">
+                    <thead>
+                        <tr>
+                            <th>UPC_Code</th>
+                            <th>Product_Name</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <!-- existing data could optionally be included here -->
+                    </tbody>
+                </table>
+
+                <template id="productrow">
+                    <tr>
+                        <td class="record"></td>
+                        <td></td>
+                    </tr>
+                </template>
+            </article>
+            <article>
+                <template shadowrootmode="open">
+                    <style>
+                        p {
+                            padding: 8px;
+                            background-color: plum;
+                        }
+                    </style>
+                    <p>I'm in the shadow DOM.</p>
+                </template>
+            </article>
+        </section>
+        <section>
+            <div id="root"></div>
+            <figure>
+                <img src="/images/alef.png" alt="Portal opening" role="img" aria-label="Predicate Portal Image" />
+                <figcaption>Polygot Portal</figcaption>
+            </figure>
+        </section>
+        <section>
+            <p hidden>
+                ⛔ Your browser doesn't support <code>shadowrootmode</code> attribute yet.
+            </p>
+        </section>
+    </main>
+    <footer>
+        <ul>
+            <li><del>Oranges</del></li>
+            <li><del>Toilet paper</del></li>
+            <li>Toothpaste</li>
+        </ul>
+    </footer>
+    <script type="module" src="main.js"></script>
+</body>
+
+</html>
