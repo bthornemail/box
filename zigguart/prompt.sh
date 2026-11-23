@@ -23,18 +23,6 @@ function build {
     done
 }
 
-function query {
-while getopts ":Vs:f" opt; do
-  case $opt in
-    V) echo "$version"; exit ;;
-    s) string=$OPTARG ;;
-    f) flag=1 ;;
-    :) echo "Missing argument for -$OPTARG" >&2; exit 1 ;;
-    *) echo "Usage: $0 [-V] [-s string] [-f]"; exit 1 ;;
-  esac
-done
-shift $((OPTIND - 1))
-}
 function prompt {
     declare -A sounds
     sounds[yah]="yes"
