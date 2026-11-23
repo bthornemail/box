@@ -35,7 +35,6 @@ loadSVGElement("images/ziggurat.svg", "root").then(() => {
         getPointer(node);
     }
 });
-
 proxy()
 if ('WebSocket' in window) {
     var protocol = window.location.protocol === 'http:' ? 'ws://' : 'wss://';
@@ -47,6 +46,15 @@ if ('WebSocket' in window) {
         // if (msg.data == 'reload') window.location.reload();
         // else if (msg.data == 'refreshcss') refreshCSS();
     };
+
+    loadSVGElement("images/ziguaroth.svg", "ziguaroth").then(() => {
+        const nodes = document.querySelectorAll(".node");
+        joinAndCompose(nodes);
+        // loadArticles();
+        for (const node of nodes) {
+            getPointer(node);
+        }
+    });
     console.log('Proxy WebSocket enabled.');
     socket.onopen = function () {
         console.log('Proxy WebSocket opened.');
