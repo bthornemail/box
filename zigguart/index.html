@@ -14,9 +14,7 @@
     <link
         href="https://fonts.googleapis.com/css2?family=Geist+Mono:wght@100..900&family=Geist:wght@100..900&display=swap"
         rel="stylesheet">
-            <link
-        href="styles.css"
-        rel="stylesheet">
+    <link href="styles.css" rel="stylesheet">
     <!-- <script src="//cdn.jsdelivr.net/npm/eruda"></script>
     <script>
         eruda.init();
@@ -86,16 +84,17 @@
         <article id="root" hidden>
             <p>Root information about the Ziggurat can be added here.</p>
         </article>
-        <article id="chronographic"  style="min-width:100%;min-height:100%;display: flex;flex-direction: column;align-items: center;justify-content: space-evenly;text-align: center;gap: 1em;">
+        <article id="chronographic"
+            style="min-width:100%;min-height:100%;display: flex;flex-direction: column;align-items: center;justify-content: space-evenly;text-align: center;gap: 1em;">
             <h2>Chronographic Modulus Indexer</h2>
-            <div class="canvases" style="min-width:100%;min-height:100%;display: flex;flex-direction: row;align-items: center;justify-content: space-evenly;text-align: center;gap: 1em;">
+            <div class="canvases"
+                style="min-width:100%;min-height:100%;display: flex;flex-direction: row;align-items: center;justify-content: space-evenly;text-align: center;gap: 1em;">
                 <div>
                     <span class="canvas-title">Canvas A</span>
                     <canvas id="main" width="200" height="200"></canvas>
                     <div>
                         <button id="main-button">
-                        <!-- <button id="main-button" onclick="javascript:alert('Block main thread - Not Implemented!');"> -->
-                            Block main thread
+                            Sync Metron
                         </button>
                     </div>
                 </div>
@@ -105,14 +104,14 @@
 
                     <div>
                         <button id="worker-button">
-                        <!-- <button id="worker-button" onclick="javascript:alert('Block worker thread - Not Implemented!');"> -->
-                            Block worker thread
+                            Sync Metric
                         </button>
                     </div>
-                </div> 
+                </div>
             </div>
-            <div id="canvas-description" style="min-width:100%;min-height:100%;display: flex;flex-direction: column;align-items: center;justify-content: space-evenly;text-align: center;gap: 1em;">
-                <button>Example button</button>
+            <div id="canvas-description"
+                style="min-width:100%;min-height:100%;display: flex;flex-direction: column;align-items: center;justify-content: space-evenly;text-align: center;gap: 1em;">
+                <button id="worker-button" onclick="javascript:alert('Example - Not Implemented!');">Example</button>
                 <p>
                     <b>When the main thread is blocked</b>, all UI elements are frozen.<br />
                     The hover effect on buttons is also blocked:
@@ -178,9 +177,11 @@
                 <label for="proxy-subnet">Subnet:</label>
                 <input type="range" id="proxy-subnet" name="proxy-subnet" min="0" max="65535" value="16535">
             </fieldset>
-            <button type="button" onclick="javascript:alert('Compose Lyrics - Not Implemented!');">Compose Lyrics</button>
+            <button type="button" onclick="javascript:alert('Compose Lyrics - Not Implemented!');">Compose
+                Lyrics</button>
             <button type="submit">Enter Portal</button>
-            <button type="button" onclick="javascript:alert('Compose Literals - Not Implemented!');">Compose Literals</button>
+            <button type="button" onclick="javascript:alert('Compose Literals - Not Implemented!');">Compose
+                Literals</button>
         </form>
     </main>
     <ul
