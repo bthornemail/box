@@ -37,3 +37,46 @@ loadSVGElement("images/ziggurat.svg", "root").then(() => {
 });
 
 proxy()
+if ('WebSocket' in window) {
+    var protocol = window.location.protocol === 'http:' ? 'ws://' : 'wss://';
+    var address = protocol + window.location.host + window.location.pathname + '/ws';
+    var socket = new WebSocket(address);
+    socket.onmessage = function (msg) {
+        console.log(msg + " message count " + counter)
+        // if (msg.data == 'reload') window.location.reload();
+        // if (msg.data == 'reload') window.location.reload();
+        // else if (msg.data == 'refreshcss') refreshCSS();
+    };
+    console.log('Proxy WebSocket enabled.');
+    socket.onopen = function () {
+        console.log('Proxy WebSocket opened.');
+        socket.send('hello' + counter);
+        socket.dispatchEvent(new Event('listening', {
+            bubbles: true, cancelable: true,
+            data: 'listening',
+            type: 'listening',
+            content: 'listening',
+            composed: true,
+        }));
+    };
+    socket.addEventListener("listening", function (e) {
+        console.log('Proxy WebSocket event data:', e);
+        console.log('Proxy WebSocket listening.');
+    });
+    socket.onclose = function () {
+        console.log('Proxy WebSocket closed.');
+    };
+    // Create a counter for Canvas A
+    let counter = 0;
+    // // Redraw Canvas A counter
+    // function redrawCanvasA() {
+    //     ctxA.clearRect(0, 0, canvasA.width, canvasA.height);
+    //     ctxA.font = "24px Verdana";
+    //     ctxA.textAlign = "center";
+    //     ctxA.fillText(counter, canvasA.width / 2, canvasA.height / 2);
+    // }
+    setInterval(() => {
+        // redrawCanvasA();
+        counter++;
+    }, 100);
+}
