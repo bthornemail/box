@@ -1,15 +1,241 @@
-<html>
+<!doctype html>
+<html prefix="og:https://localhost/#" lang="en">
 
 <head>
-	<!-- <script src="//cdn.jsdelivr.net/npm/eruda"></script>
-	<script>eruda.init();</script> -->
-	<link rel="stylesheet" href="styles.css">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta property="og:title" content="Ziggurat of Ziguaroth" />
+    <meta property="og:type" content="video.movie" />
+    <meta property="og:url" content="https://localhost/" />
+    <meta property="og:image" content="https://localhost/images/alef.gif" />
+    <link rel="stylesheet" href="reset.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Geist+Mono:wght@100..900&family=Geist:wght@100..900&display=swap"
+        rel="stylesheet">
+    <!-- <script src="//cdn.jsdelivr.net/npm/eruda"></script>
+    <script>
+        eruda.init();
+    </script> -->
+    <title>Ziggurat of Ziguaroth</title>
+
 </head>
 
-<body class="dot-grid-24">
-	<div id="root"></div>
-	<script src="//cdn.jsdelivr.net/npm/3d-force-graph"></script>
-	<script type="module" src="main.js"></script>
-</body>
+<body class="dot-grid-24" style="display: flex; flex-direction: column; justify-content: center; align-items: center;">
 
-</html>
+    <ul
+        style="flex:content;width: 100%; display: flex; align-items: center; justify-content: space-around; padding:1em;">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="client.html">Client</a></li>
+        <li><a href="server.html">Server</a></li>
+        <li><a href="system.html">System</a></li>
+        <li><a href="alef.html">
+                <ruby>
+                    <ins>&alefsym;</ins>
+                    <rt>Alef</rt>
+                </ruby>
+            </a>
+        </li>
+        <li><a href="thorn.html">
+                <ruby>
+                    <ins>&THORN;</ins>
+                    <rt>Thorne</rt>
+
+                </ruby>
+            </a>
+        </li>
+        <li><a href="omega.html">
+                <ruby>
+                    <ins>&exist;</ins>
+                    <rt>Exist</rt>
+
+                </ruby>
+            </a>
+        </li>
+    </ul>
+    <main
+        style="min-height:100%;display: flex;flex-direction: column;align-items: center;justify-content: center;text-align: center;gap: 1em;">
+        <h1>Ziggurat of Ziguaroth</h1>
+        <p>Welcome to the Ziggurat of Ziguaroth, a place where ancient symbols and modern technology converge.</p>
+        <article id="alef" hidden>
+            <section>
+                <figure>
+                    <img width="320" height="240" src="/images/alef.png" alt="Portal opening" role="img"
+                        aria-label="Predicate Portal Image" style="border: 2px solid #94a3b8;" />
+                    <figcaption>Polygot Portal</figcaption>
+                </figure>
+            </section>
+        </article>        
+        <article id="root" hidden>
+            <p>Root information about the Ziggurat can be added here.</p>
+        </article>
+        <article id="additional-info" >
+            <p>Additional information about the Ziggurat can be added here.</p>
+            <div class="canvases">
+                <div>
+                    <span class="canvas-title">Canvas A</span>
+                    <canvas id="main" width="200" height="200"></canvas>
+                    <div>
+                        <button id="main-button" onclick="slowMainThread()">
+                            Block main thread
+                        </button>
+                    </div>
+                </div>
+                <div>
+                    <span class="canvas-title">Canvas B</span>
+                    <canvas id="worker" width="200" height="200"></canvas>
+
+                    <div>
+                        <button id="worker-button" onclick="slowdownWorker()">
+                            Block worker thread
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <div id="canvas-description">
+                <p>
+                    <b>When the main thread is blocked</b>, all UI elements are frozen.<br />
+                    The hover effect on buttons is also blocked:
+                </p>
+                <button>Example button</button>
+                <p>
+                    <b>When the worker thread is blocked</b>, the main thread is free to
+                    do work such as the element hover effects and animations. Blocking the
+                    worker thread will still prevent Canvas B's counter from being
+                    updated, but the rest of the UI stays responsive while this is true.
+                </p>
+            </div>
+        </article>
+        <p>Explore the various portals and symbols that await you within the Ziggurat.</p>
+        <form style="margin: 0 auto;padding: 0 1em;gap:1em">
+            <label for="portal">Choose a portal:</label>
+            <select id="portal" name="portal">
+                <option value="client">Client</option>
+                <option value="server">Server</option>
+                <option value="system">System</option>
+            </select>
+            <fieldset>
+                <legend>Enter Coordinate Space:</legend>
+                <div style="display: grid;grid-template-columns: auto 1fr 1fr 1fr;gap: 0.5em;">
+                    <label for="V0">V0:</label>
+                    <input type="range" id="V0" name="V0" min="0" max="255" value="31">
+                    <label for="V1">V1:</label>
+                    <input type="range" id="V1" name="V1" min="0" max="255" value="63">
+                    <label for="V2">V2:</label>
+                    <input type="range" id="V2" name="V2" min="0" max="255" value="127">
+                    <label for="V3">V3:</label>
+                    <input type="range" id="V3" name="V3" min="0" max="255" value="255">
+                    <label for="C0">C0:</label>
+                    <input type="range" id="C0" name="C0" min="0" max="511" value="256">
+                    <label for="C1">C1:</label>
+                    <input type="range" id="C1" name="C1" min="512" max="1023" value="256">
+                </div>
+                <select id="space" name="space">
+                    <option value="alef">Alef</option>
+                    <option value="alpha">Alpha</option>
+                    <option value="beta">Beta</option>
+                    <option value="gamma">Gamma</option>
+                    <option value="delta">Delta</option>
+                    <option value="epsilon">Epsilon</option>
+                    <option value="zeta">Zeta</option>
+                    <option value="eta">Eta</option>
+                    <option value="theta">Theta</option>
+                </select>
+            </fieldset>
+
+            <fieldset>
+                <legend>Enter Proxy Name:</legend>
+                <label for="proxy-name"></label>
+                <input type="text" id="proxy-name" name="Enter proxy name" placeholder="Enter proxy name">
+                <details>
+                    <summary>
+                        Subnet Details
+                    </summary>
+                    <description>
+                        Enter the subnet for the proxy.
+                    </description>
+
+                    <label for="proxy-description">Description:</label>
+                    <textarea id="proxy-description" name="proxy-description"
+                        placeholder="Enter proxy description"></textarea>
+                </details>
+
+                <label for="proxy-port">Port:</label>
+                <input type="range" id="proxy-port" name="proxy-port" min="0" max="65535" value="1024">
+                <label for="proxy-subnet">Subnet:</label>
+                <input type="range" id="proxy-subnet" name="proxy-subnet" min="0" max="65535" value="16535">
+            </fieldset>
+            <button type="button">Compose Lyrics</button>
+            <button type="submit">Enter Portal</button>
+            <button type="button">Compose Literals</button>
+        </form>
+    </main>
+    <ul
+        style="flex:content;width: 100%; display: flex; align-items: center; justify-content: space-around; padding:1em;">
+        <li><a href="alef.html">
+                <ruby>
+                    <ins>&alefsym;</ins>
+                    <rt>Alef</rt>
+                </ruby>
+            </a>
+        </li>
+        <li><a href="alpha.html">
+                <ruby>
+                    <ins>&alpha;</ins>
+                    <rt>Alpha</rt>
+                </ruby>
+            </a>
+        </li>
+        <li><a href="beta.html">
+                <ruby>
+                    <ins>&beta;</ins>
+                    <rt>Beta</rt>
+                </ruby>
+            </a>
+        </li>
+        <li><a href="gamma.html">
+                <ruby>
+                    <ins>&gamma;</ins>
+                    <rt>Gamma</rt>
+                </ruby>
+            </a>
+        </li>
+        <li><a href="delta.html">
+                <ruby>
+                    <ins>&delta;</ins>
+                    <rt>Delta</rt>
+                </ruby>
+            </a>
+        </li>
+        <li><a href="epsilon.html">
+                <ruby>
+                    <ins>&epsilon;</ins>
+                    <rt>Epsilon</rt>
+                </ruby>
+            </a>
+        </li>
+        <li><a href="zeta.html">
+                <ruby>
+                    <ins>&zeta;</ins>
+                    <rt>Zeta</rt>
+                </ruby>
+            </a>
+        </li>
+        <li><a href="eta.html">
+                <ruby>
+                    <ins>&eta;</ins>
+                    <rt>Eta</rt>
+                </ruby>
+            </a>
+        </li>
+        <li><a href="theta.html">
+                <ruby>
+                    <ins>&theta;</ins>
+                    <rt>Theta</rt>
+                </ruby>
+            </a>
+        </li>
+    </ul>
+    <script type="module" src="main.js"></script>
+</body>

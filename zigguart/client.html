@@ -1,0 +1,29 @@
+<html>
+
+<head>
+	<script src="//cdn.jsdelivr.net/npm/eruda"></script>
+	<script>eruda.init();</script>
+	<link rel="stylesheet" href="styles.css">
+</head>
+
+<body class="dot-grid-24">
+  <nav>
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="client.html">Client</a></li>
+      <li><a href="server.html">Server</a></li>
+      <li><a href="system.html">System</a></li>
+    </ul>
+  </nav>
+	<img src="images/ziguaroth.gif" usemap="#ziguaroth" alt="350 x 150 picture of two parrots"
+		srcset="clock-demo-200px.png 200w, clock-demo-400px.png 400w" sizes="(width <= 600px) 200px, 50vw" />
+	<!-- When the (width <= 600px) media condition matches, the 200 pixel-wide image will load (it is the one that matches 200px most closely), otherwise the other image will load. -->
+	<p> <b>content of x.map</b> </p>
+	<map id="ziguaroth" name="ziguaroth">
+		<!-- Ziguaroth Polybius -->
+		<area shape="circle" coords="75,75,75" target="_blank" href="left.html" alt="Click to go Left" />
+		<area shape="circle" coords="275,75,75" target="_blank" href="right.html" alt="Click to go Right" />
+	</map>
+</body>
+
+</html>
