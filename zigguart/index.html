@@ -14,30 +14,46 @@
     <link
         href="https://fonts.googleapis.com/css2?family=Geist+Mono:wght@100..900&family=Geist:wght@100..900&display=swap"
         rel="stylesheet">
+            <link
+        href="styles.css"
+        rel="stylesheet">
     <!-- <script src="//cdn.jsdelivr.net/npm/eruda"></script>
     <script>
         eruda.init();
     </script> -->
     <title>Ziggurat of Ziguaroth</title>
+    <style>
+        a:link,
+        a:visited {
+            color: (internal value);
+            text-decoration: underline;
+            cursor: auto;
+        }
 
+        a:link:active,
+        a:visited:active {
+            color: (internal value);
+        }
+    </style>
 </head>
 
 <body class="dot-grid-24" style="display: flex; flex-direction: column; justify-content: center; align-items: center;">
 
     <ul
         style="flex:content;width: 100%; display: flex; align-items: center; justify-content: space-around; padding:1em;">
-        <li><a href="index.html">Home</a></li>
-        <li><a href="client.html">Client</a></li>
-        <li><a href="server.html">Server</a></li>
-        <li><a href="system.html">System</a></li>
-        <li><a href="alef.html">
+        <li><a href="index">Home</a></li>
+        <li><a href="#client">Client</a></li>
+        <li><a href="#server">Server</a></li>
+        <li><a href="#system" rel="tag">System</a></li>
+        <!-- <a href="javascript:alert('Hello World!');">Execute JavaScript</a> -->
+        <li><a href="#alef">
                 <ruby>
                     <ins>&alefsym;</ins>
                     <rt>Alef</rt>
                 </ruby>
             </a>
         </li>
-        <li><a href="thorn.html">
+        <li><a href="#thorn">
                 <ruby>
                     <ins>&THORN;</ins>
                     <rt>Thorne</rt>
@@ -45,7 +61,7 @@
                 </ruby>
             </a>
         </li>
-        <li><a href="omega.html">
+        <li><a href="#omega">
                 <ruby>
                     <ins>&exist;</ins>
                     <rt>Exist</rt>
@@ -66,18 +82,18 @@
                     <figcaption>Polygot Portal</figcaption>
                 </figure>
             </section>
-        </article>        
+        </article>
         <article id="root" hidden>
             <p>Root information about the Ziggurat can be added here.</p>
         </article>
-        <article id="additional-info" >
-            <p>Additional information about the Ziggurat can be added here.</p>
-            <div class="canvases">
+        <article id="chronographic"  style="min-width:100%;min-height:100%;display: flex;flex-direction: column;align-items: center;justify-content: space-evenly;text-align: center;gap: 1em;">
+            <h2>Chronographic Modulus Indexer</h2>
+            <div class="canvases" style="min-width:100%;min-height:100%;display: flex;flex-direction: row;align-items: center;justify-content: space-evenly;text-align: center;gap: 1em;">
                 <div>
                     <span class="canvas-title">Canvas A</span>
                     <canvas id="main" width="200" height="200"></canvas>
                     <div>
-                        <button id="main-button" onclick="slowMainThread()">
+                        <button id="main-button" onclick="javascript:alert('Block main thread - Not Implemented!');">
                             Block main thread
                         </button>
                     </div>
@@ -87,23 +103,17 @@
                     <canvas id="worker" width="200" height="200"></canvas>
 
                     <div>
-                        <button id="worker-button" onclick="slowdownWorker()">
+                        <button id="worker-button" onclick="javascript:alert('Block worker thread - Not Implemented!');">
                             Block worker thread
                         </button>
                     </div>
-                </div>
+                </div> 
             </div>
-            <div id="canvas-description">
+            <div id="canvas-description" style="min-width:100%;min-height:100%;display: flex;flex-direction: column;align-items: center;justify-content: space-evenly;text-align: center;gap: 1em;">
+                <button>Example button</button>
                 <p>
                     <b>When the main thread is blocked</b>, all UI elements are frozen.<br />
                     The hover effect on buttons is also blocked:
-                </p>
-                <button>Example button</button>
-                <p>
-                    <b>When the worker thread is blocked</b>, the main thread is free to
-                    do work such as the element hover effects and animations. Blocking the
-                    worker thread will still prevent Canvas B's counter from being
-                    updated, but the rest of the UI stays responsive while this is true.
                 </p>
             </div>
         </article>
@@ -166,70 +176,70 @@
                 <label for="proxy-subnet">Subnet:</label>
                 <input type="range" id="proxy-subnet" name="proxy-subnet" min="0" max="65535" value="16535">
             </fieldset>
-            <button type="button">Compose Lyrics</button>
+            <button type="button" onclick="javascript:alert('Compose Lyrics - Not Implemented!');">Compose Lyrics</button>
             <button type="submit">Enter Portal</button>
-            <button type="button">Compose Literals</button>
+            <button type="button" onclick="javascript:alert('Compose Literals - Not Implemented!');">Compose Literals</button>
         </form>
     </main>
     <ul
         style="flex:content;width: 100%; display: flex; align-items: center; justify-content: space-around; padding:1em;">
-        <li><a href="alef.html">
+        <li><a href="#alef">
                 <ruby>
                     <ins>&alefsym;</ins>
                     <rt>Alef</rt>
                 </ruby>
             </a>
         </li>
-        <li><a href="alpha.html">
+        <li><a href="#alpha">
                 <ruby>
                     <ins>&alpha;</ins>
                     <rt>Alpha</rt>
                 </ruby>
             </a>
         </li>
-        <li><a href="beta.html">
+        <li><a href="#beta">
                 <ruby>
                     <ins>&beta;</ins>
                     <rt>Beta</rt>
                 </ruby>
             </a>
         </li>
-        <li><a href="gamma.html">
+        <li><a href="#gamma">
                 <ruby>
                     <ins>&gamma;</ins>
                     <rt>Gamma</rt>
                 </ruby>
             </a>
         </li>
-        <li><a href="delta.html">
+        <li><a href="#delta">
                 <ruby>
                     <ins>&delta;</ins>
                     <rt>Delta</rt>
                 </ruby>
             </a>
         </li>
-        <li><a href="epsilon.html">
+        <li><a href="#epsilon">
                 <ruby>
                     <ins>&epsilon;</ins>
                     <rt>Epsilon</rt>
                 </ruby>
             </a>
         </li>
-        <li><a href="zeta.html">
+        <li><a href="#zeta">
                 <ruby>
                     <ins>&zeta;</ins>
                     <rt>Zeta</rt>
                 </ruby>
             </a>
         </li>
-        <li><a href="eta.html">
+        <li><a href="#eta">
                 <ruby>
                     <ins>&eta;</ins>
                     <rt>Eta</rt>
                 </ruby>
             </a>
         </li>
-        <li><a href="theta.html">
+        <li><a href="#theta">
                 <ruby>
                     <ins>&theta;</ins>
                     <rt>Theta</rt>

@@ -1,3 +1,4 @@
+
 export default function proxy() {
     const root = document.getElementById("root");
     const canvasA = document.getElementById("main");
