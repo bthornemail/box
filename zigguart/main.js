@@ -40,6 +40,7 @@ if ('WebSocket' in window) {
     var protocol = window.location.protocol === 'http:' ? 'ws://' : 'wss://';
     var address = protocol + window.location.host + window.location.pathname + '/ws';
     var socket = new WebSocket(address);
+    let counter = 0;
     socket.onmessage = function (msg) {
         console.log(msg + " message count " + counter)
         // if (msg.data == 'reload') window.location.reload();
@@ -75,7 +76,6 @@ if ('WebSocket' in window) {
         console.log('Proxy WebSocket closed.');
     };
     // Create a counter for Canvas A
-    let counter = 0;
     // // Redraw Canvas A counter
     // function redrawCanvasA() {
     //     ctxA.clearRect(0, 0, canvasA.width, canvasA.height);

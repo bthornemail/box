@@ -1,7 +1,7 @@
 <!doctype html>
 <html prefix="og:https://localhost/#" lang="en">
 
-<head>
+  <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta property="og:title" content="Ziggurat of Ziguaroth" />
@@ -12,244 +12,455 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
-        href="https://fonts.googleapis.com/css2?family=Geist+Mono:wght@100..900&family=Geist:wght@100..900&display=swap"
-        rel="stylesheet">
+      href="https://fonts.googleapis.com/css2?family=Geist+Mono:wght@100..900&family=Geist:wght@100..900&display=swap"
+      rel="stylesheet">
     <link href="styles.css" rel="stylesheet">
-    <!-- <script src="//cdn.jsdelivr.net/npm/eruda"></script>
+    <script src="//cdn.jsdelivr.net/npm/eruda"></script>
     <script>
-        eruda.init();
-    </script> -->
+      eruda.init();
+    </script> 
     <title>Ziggurat of Ziguaroth</title>
     <style>
-        a:link,
-        a:visited {
-            color: (internal value);
-            text-decoration: underline;
-            cursor: auto;
-        }
+      a:link,
+      a:visited {
+          color: (internal value);
+          text-decoration: underline;
+          cursor: auto;
+      }
 
-        a:link:active,
-        a:visited:active {
-            color: (internal value);
-        }
+      a:link:active,
+      a:visited:active {
+          color: (internal value);
+      }
+      article::before {
+	  content: attr(data-parent);
+      }
+      article[data-columns="3"] {
+	  width: 400px;
+      }
+      article[data-columns="4"] {
+	  width: 600px;
+      }
     </style>
-</head>
+  </head>
 
-<body class="dot-grid-24" style="display: flex; flex-direction: column; justify-content: center; align-items: center;">
+  <body class="dot-grid-24" style="display: flex; flex-direction: column; justify-content: center; align-items: center;">
 
     <ul
-        style="flex:content;width: 100%; display: flex; align-items: center; justify-content: space-around; padding:1em;">
-        <li><a href="index">Home</a></li>
-        <li><a href="#client">Client</a></li>
-        <li><a href="#server">Server</a></li>
-        <li><a href="#system" rel="tag">System</a></li>
-        <!-- <a href="javascript:alert('Hello World!');">Execute JavaScript</a> -->
-        <li><a href="#alef">
-                <ruby>
-                    <ins>&alefsym;</ins>
-                    <rt>Alef</rt>
-                </ruby>
-            </a>
-        </li>
-        <li><a href="#thorn">
-                <ruby>
-                    <ins>&THORN;</ins>
-                    <rt>Thorne</rt>
+      style="flex:content;width: 100%; display: flex; align-items: center; justify-content: space-around; padding:1em;">
+      <li><a href="index">Home</a></li>
+      <li><a href="#client">Client</a></li>
+      <li><a href="#server">Server</a></li>
+      <li><a href="#system" rel="tag">System</a></li>
+      <!-- <a href="javascript:alert('Hello World!');">Execute JavaScript</a> -->
+      <li><a href="#alef">
+          <ruby>
+            <ins>&alefsym;</ins>
+            <rt>Alef</rt>
+          </ruby>
+        </a>
+      </li>
+      <li><a href="#thorn">
+          <ruby>
+            <ins>&THORN;</ins>
+            <rt>Thorne</rt>
 
-                </ruby>
-            </a>
-        </li>
-        <li><a href="#omega">
-                <ruby>
-                    <ins>&exist;</ins>
-                    <rt>Exist</rt>
+          </ruby>
+        </a>
+      </li>
+      <li><a href="#omega">
+          <ruby>
+            <ins>&exist;</ins>
+            <rt>Exist</rt>
 
-                </ruby>
-            </a>
-        </li>
+          </ruby>
+        </a>
+      </li>
     </ul>
     <main
-        style="min-height:100%;display: flex;flex-direction: column;align-items: center;justify-content: center;text-align: center;gap: 1em;">
-        <h1>Ziggurat of Ziguaroth</h1>
-        <p>Welcome to the Ziggurat of Ziguaroth, a place where ancient symbols and modern technology converge.</p>
-        <article id="alef" hidden>
-            <section>
-                <figure>
-                    <img width="320" height="240" src="/images/alef.png" alt="Portal opening" role="img"
-                        aria-label="Predicate Portal Image" style="border: 2px solid #94a3b8;" />
-                    <figcaption>Polygot Portal</figcaption>
-                </figure>
-            </section>
-        </article>
-        <article id="root" hidden>
-            <p>Root information about the Ziggurat can be added here.</p>
-        </article>
-        <article id="chronographic"
-            style="min-width:100%;min-height:100%;display: flex;flex-direction: column;align-items: center;justify-content: space-evenly;text-align: center;gap: 1em;">
-            <h2>Chronographic Modulus Indexer</h2>
-            <div class="canvases"
-                style="min-width:100%;min-height:100%;display: flex;flex-direction: row;align-items: center;justify-content: space-evenly;text-align: center;gap: 1em;">
-                <div>
-                    <span class="canvas-title">Canvas A</span>
-                    <canvas id="main" width="200" height="200"></canvas>
-                    <div>
-                        <button id="main-button">
-                            Sync Metron
-                        </button>
-                    </div>
-                </div>
-                <div>
-                    <span class="canvas-title">Canvas B</span>
-                    <canvas id="worker" width="200" height="200"></canvas>
-
-                    <div>
-                        <button id="worker-button">
-                            Sync Metric
-                        </button>
-                    </div>
-                </div>
+      style="min-height:100%;display: flex;flex-direction: column;align-items: center;justify-content: center;text-align: center;gap: 1em;">
+      <h1>Ziggurat of Ziguaroth</h1>
+      <p>Welcome to the Ziggurat of Ziguaroth, a place where ancient symbols and modern technology converge.</p>
+      <article id="alef" hidden>
+        <section>
+          <figure>
+            <img width="320" height="240" src="/images/alef.png" alt="Portal opening" role="img"
+                 aria-label="Predicate Portal Image" style="border: 2px solid #94a3b8;" />
+            <figcaption>Polygot Portal</figcaption>
+          </figure>
+        </section>
+      </article>
+      <article id="root" hidden>
+        <p>Root information about the Ziggurat can be added here.</p>
+      </article>
+      <article id="chronographic"
+               style="min-width:100%;min-height:100%;display: flex;flex-direction: column;align-items: center;justify-content: space-evenly;text-align: center;gap: 1em;">
+        <h2>Chronographic Modulus Indexer</h2>
+        <div class="canvases"
+             style="min-width:100%;min-height:100%;display: flex;flex-direction: row;align-items: center;justify-content: space-evenly;text-align: center;gap: 1em;">
+          <div>
+            <span class="canvas-title">Canvas A</span>
+            <canvas id="modulus-canvas" width="240" height="360"></canvas>
+            <div>
+              <button id="modulus-button" data-command-word="modulus" data-modulus-id="42" data-action="sync">
+                Sync Modulus
+              </button>
             </div>
-            <div id="canvas-description"
-                style="min-width:100%;min-height:100%;display: flex;flex-direction: column;align-items: center;justify-content: space-evenly;text-align: center;gap: 1em;">
-                <button id="worker-button" onclick="javascript:alert('Example - Not Implemented!');">Example</button>
-                <p>
-                    <b>When the main thread is blocked</b>, all UI elements are frozen.<br />
-                    The hover effect on buttons is also blocked:
-                </p>
+          </div>
+          <div>
+            <span class="canvas-title">Canvas B</span>
+            <canvas id="index-canvas" width="240" height="360"></canvas>
+
+            <div>
+              <button id="index-button" data-command-word="index" data-index-id="10" data-action="sync">
+                Sync Index
+              </button>
             </div>
-        </article>
-        <article id="ziguaroth"></article>
-        <p>Explore the various portals and symbols that await you within the Ziggurat.</p>
-        <form style="margin: 0 auto;padding: 0 1em;gap:1em">
-            <label for="portal">Choose a portal:</label>
-            <select id="portal" name="portal">
-                <option value="client">Client</option>
-                <option value="server">Server</option>
-                <option value="system">System</option>
-            </select>
-            <fieldset>
-                <legend>Enter Coordinate Space:</legend>
-                <div style="display: grid;grid-template-columns: auto 1fr 1fr 1fr;gap: 0.5em;">
-                    <label for="V0">V0:</label>
-                    <input type="range" id="V0" name="V0" min="0" max="255" value="31">
-                    <label for="V1">V1:</label>
-                    <input type="range" id="V1" name="V1" min="0" max="255" value="63">
-                    <label for="V2">V2:</label>
-                    <input type="range" id="V2" name="V2" min="0" max="255" value="127">
-                    <label for="V3">V3:</label>
-                    <input type="range" id="V3" name="V3" min="0" max="255" value="255">
-                    <label for="C0">C0:</label>
-                    <input type="range" id="C0" name="C0" min="0" max="511" value="256">
-                    <label for="C1">C1:</label>
-                    <input type="range" id="C1" name="C1" min="512" max="1023" value="256">
-                </div>
-                <select id="space" name="space">
-                    <option value="alef">Alef</option>
-                    <option value="alpha">Alpha</option>
-                    <option value="beta">Beta</option>
-                    <option value="gamma">Gamma</option>
-                    <option value="delta">Delta</option>
-                    <option value="epsilon">Epsilon</option>
-                    <option value="zeta">Zeta</option>
-                    <option value="eta">Eta</option>
-                    <option value="theta">Theta</option>
-                </select>
-            </fieldset>
+          </div>
+        </div>
+	<style>
+	  /* Target any element with a data-action attribute */
+	  [data-action] {
+	      cursor: pointer;
+	  }
 
-            <fieldset>
-                <legend>Enter Proxy Name:</legend>
-                <label for="proxy-name"></label>
-                <input type="text" id="proxy-name" name="Enter proxy name" placeholder="Enter proxy name">
-                <details>
-                    <summary>
-                        Subnet Details
-                    </summary>
-                    <description>
-                        Enter the subnet for the proxy.
-                    </description>
+	  /* Target a specific value */
+	  button[data-action="sync"] {
+	      background-color: lightblue;
+	      color: white;
+	  }
 
-                    <label for="proxy-description">Description:</label>
-                    <textarea id="proxy-description" name="proxy-description"
+	</style>
+	<script>
+	  const ibtn = document.querySelector('#index-button');
+	  const mbtn = document.querySelector('#modulus-button');
+
+	  // Read values
+	  //alert(ibtn.dataset.commandWord); // "42"
+	  //alert(ibtn.dataset.action); // "delete"
+	  //alert(mbtn.dataset.commandWord); // "42"
+	  //alert(mbtn.dataset.action); // "delete"
+
+	  // Update or add a new data attribute
+	  ibtn.dataset.status = 'pending'; // Adds data-status="pending" to the HTML
+	  mbtn.dataset.status = 'pending'; // Adds data-status="pending" to the HTML
+
+	</script>
+	<div id="canvas-description"
+	     style="min-width:100%;min-height:100%;display: flex;flex-direction: column;align-items: center;justify-content: space-evenly;text-align: center;gap: 1em;">
+	  <button id="worker-button" onclick="javascript:alert('Example - Not Implemented!');">Example</button>
+
+	  <section >
+	    <article
+	      id="alef0above"
+	      data-columns="4"
+	      data-index-number="8240"
+	      data-parent="alef">
+	      <!-- orbital content -->
+	    </article>
+
+	    <article
+	      id="alef0aligned"
+	      data-columns="6"
+	      data-index-number="8241"
+	      data-parent="alef">
+	      <!-- observer content -->
+	      loading...
+	    </article>
+
+	    <article
+	      id="below0alef"
+	      data-columns="4"
+	      data-index-number="8242"
+	      data-parent="alef">
+	      <!-- earth content -->
+	    </article>
+	  </section>
+	  <p>
+	    <b>When the main thread is blocked</b>, all UI elements are frozen.<br />
+	    The hover effect on buttons is also blocked:
+          </p>
+        </div>
+	<script>
+	  // Find all elements with a data-columns attribute
+	  const articles = document.querySelectorAll("[data-columns]");
+
+	  // Find all elements with data-columns="3"
+	  const fourColumnArticles = document.querySelectorAll('[data-columns="4"]');
+	  // You can then iterate over the results
+	  fourColumnArticles.forEach((article) => {
+	      console.log(article.dataset.indexNumber);
+	  });
+	</script>
+      </article>
+      <article id="controller">
+	<form name="controller-form" method="get" action="#controller-input">
+	  <input name="controller-input"
+		 type="image" alt="image mapping of scene"
+		 id="controller-image" src="images/controller.gif"
+ 		 ismap="true"
+		 width="24" height="36"
+		 style="object-position: right top;object-fit: contain;background-color: #dddddd;" />
+	  </form>
+      </article>
+      <article id="controller-map" hidden>
+	<a href="images/controller.map">
+	  <image name="controller"
+		 type="image" alt="image mapping of scene"
+		 id="controller" src="images/controller.gif"
+ 		 ismap="true"
+		 width="24" height="36"
+		 style="object-position: right top;object-fit: contain;background-color: #dddddd;" />
+	</a>
+      </article>
+      <p>Explore the various portals and symbols that await you within the Ziggurat.</p>
+      <form style="margin: 0 auto;padding: 0 1em;gap:1em">
+	<label for="portal">Choose a portal:</label>
+	<select id="portal" name="portal">
+          <option value="client">Client</option>
+          <option value="server">Server</option>
+          <option value="system">System</option>
+        </select>
+        <fieldset>
+          <legend>Enter Coordinate Space:</legend>
+          <div style="display: grid;grid-template-columns: auto 1fr 1fr 1fr;gap: 0.5em;">
+            <label for="V0">V0:</label>
+            <input type="range" id="V0" name="V0" min="0" max="255" value="31">
+            <label for="V1">V1:</label>
+            <input type="range" id="V1" name="V1" min="0" max="255" value="63">
+            <label for="V2">V2:</label>
+            <input type="range" id="V2" name="V2" min="0" max="255" value="127">
+            <label for="V3">V3:</label>
+            <input type="range" id="V3" name="V3" min="0" max="255" value="255">
+            <label for="C0">C0:</label>
+            <input type="range" id="C0" name="C0" min="0" max="511" value="256">
+            <label for="C1">C1:</label>
+            <input type="range" id="C1" name="C1" min="512" max="1023" value="256">
+          </div>
+          <select id="space" name="space">
+            <option value="alef">Alef</option>
+            <option value="alpha">Alpha</option>
+            <option value="beta">Beta</option>
+            <option value="gamma">Gamma</option>
+            <option value="delta">Delta</option>
+            <option value="epsilon">Epsilon</option>
+            <option value="zeta">Zeta</option>
+            <option value="eta">Eta</option>
+            <option value="theta">Theta</option>
+          </select>
+        </fieldset>
+
+        <fieldset>
+          <legend>Enter Proxy Name:</legend>
+          <label for="proxy-name"></label>
+          <input type="text" id="proxy-name" name="Enter proxy name" placeholder="Enter proxy name">
+          <details>
+            <summary>
+              Subnet Details
+            </summary>
+            <description>
+              Enter the subnet for the proxy.
+            </description>
+
+            <label for="proxy-description">Description:</label>
+            <textarea id="proxy-description" name="proxy-description"
                         placeholder="Enter proxy description"></textarea>
-                </details>
+          </details>
 
-                <label for="proxy-port">Port:</label>
-                <input type="range" id="proxy-port" name="proxy-port" min="0" max="65535" value="1024">
-                <label for="proxy-subnet">Subnet:</label>
-                <input type="range" id="proxy-subnet" name="proxy-subnet" min="0" max="65535" value="16535">
-            </fieldset>
-            <button type="button" onclick="javascript:alert('Compose Lyrics - Not Implemented!');">Compose
-                Lyrics</button>
-            <button type="submit">Enter Portal</button>
-            <button type="button" onclick="javascript:alert('Compose Literals - Not Implemented!');">Compose
-                Literals</button>
-        </form>
+          <label for="proxy-port">Port:</label>
+          <input type="range" id="proxy-port" name="proxy-port" min="0" max="65535" value="1024">
+          <label for="proxy-subnet">Subnet:</label>
+          <input type="range" id="proxy-subnet" name="proxy-subnet" min="0" max="65535" value="16535">
+        </fieldset>
+        <button type="button" onclick="javascript:alert('Compose Lyrics - Not Implemented!');">Compose
+          Lyrics</button>
+        <button type="submit">Enter Portal</button>
+        <button type="button" onclick="javascript:alert('Compose Literals - Not Implemented!');">Compose
+          Literals</button>
+      </form>
     </main>
     <ul
-        style="flex:content;width: 100%; display: flex; align-items: center; justify-content: space-around; padding:1em;">
-        <li><a href="#alef">
-                <ruby>
-                    <ins>&alefsym;</ins>
-                    <rt>Alef</rt>
-                </ruby>
-            </a>
-        </li>
-        <li><a href="#alpha">
-                <ruby>
-                    <ins>&alpha;</ins>
-                    <rt>Alpha</rt>
-                </ruby>
-            </a>
-        </li>
-        <li><a href="#beta">
-                <ruby>
-                    <ins>&beta;</ins>
-                    <rt>Beta</rt>
-                </ruby>
-            </a>
-        </li>
-        <li><a href="#gamma">
-                <ruby>
-                    <ins>&gamma;</ins>
-                    <rt>Gamma</rt>
-                </ruby>
-            </a>
-        </li>
-        <li><a href="#delta">
-                <ruby>
-                    <ins>&delta;</ins>
-                    <rt>Delta</rt>
-                </ruby>
-            </a>
-        </li>
-        <li><a href="#epsilon">
-                <ruby>
-                    <ins>&epsilon;</ins>
-                    <rt>Epsilon</rt>
-                </ruby>
-            </a>
-        </li>
-        <li><a href="#zeta">
-                <ruby>
-                    <ins>&zeta;</ins>
-                    <rt>Zeta</rt>
-                </ruby>
-            </a>
-        </li>
-        <li><a href="#eta">
-                <ruby>
-                    <ins>&eta;</ins>
-                    <rt>Eta</rt>
-                </ruby>
-            </a>
-        </li>
-        <li><a href="#theta">
-                <ruby>
-                    <ins>&theta;</ins>
-                    <rt>Theta</rt>
-                </ruby>
-            </a>
-        </li>
+      style="flex:content;width: 100%; display: flex; align-items: center; justify-content: space-around; padding:1em;">
+      <li><a href="#alef">
+          <ruby>
+            <ins>&alefsym;</ins>
+            <rt>Alef</rt>
+          </ruby>
+        </a>
+      </li>
+      <li><a href="#alpha">
+          <ruby>
+            <ins>&alpha;</ins>
+            <rt>Alpha</rt>
+          </ruby>
+        </a>
+      </li>
+      <li><a href="#beta">
+          <ruby>
+            <ins>&beta;</ins>
+            <rt>Beta</rt>
+          </ruby>
+        </a>
+      </li>
+      <li><a href="#gamma">
+          <ruby>
+            <ins>&gamma;</ins>
+            <rt>Gamma</rt>
+          </ruby>
+        </a>
+      </li>
+      <li><a href="#delta">
+          <ruby>
+            <ins>&delta;</ins>
+            <rt>Delta</rt>
+          </ruby>
+        </a>
+      </li>
+      <li><a href="#epsilon">
+          <ruby>
+            <ins>&epsilon;</ins>
+            <rt>Epsilon</rt>
+          </ruby>
+        </a>
+      </li>
+      <li><a href="#zeta">
+          <ruby>
+            <ins>&zeta;</ins>
+            <rt>Zeta</rt>
+          </ruby>
+        </a>
+      </li>
+      <li><a href="#eta">
+          <ruby>
+            <ins>&eta;</ins>
+            <rt>Eta</rt>
+          </ruby>
+        </a>
+      </li>
+      <li><a href="#theta">
+          <ruby>
+            <ins>&theta;</ins>
+            <rt>Theta</rt>
+          </ruby>
+        </a>
+      </li>
     </ul>
+    <script>
+      
+      window.navigation.addEventListener("navigate", (event) => {
+	  console.log("Navigating to:", event.destination.url);
+
+	  // Optional: Intercept same-origin navigations for Single Page Apps (SPAs)
+	  if (event.canIntercept) {
+	      event.intercept({
+		  async handler() {
+		      // Fetch and render new content here
+		  },
+	      });
+	  }
+      });
+
+      // Caveat: Calling history.pushState() or history.replaceState() does not trigger popstate. If your code calls those methods manually, you must run your URL-change handler directly right after calling them.
+      // 
+      // History API (popstate event)
+
+      // If you need broad legacy support, listen to the popstate event. It fires whenever the active history entry changes (such as the user clicking the browser's Back or Forward buttons).
+      window.addEventListener("popstate", (event) => {
+	  console.log("Location:", document.location.href, "State:", event.state);
+      });
+
+      // URL Fragment / Anchor Changes (hashchange event)
+
+      // If you only care about changes to the hash portion of the URL (everything after #), use the hashchange event.
+
+      window.addEventListener("hashchange", (event) => {
+	  console.log("Old URL:", event.oldURL);
+	  console.log("New URL:", event.newURL);
+	  console.log("Current Hash:", window.location.hash);
+      });
+      // This event does not fire when the hash is modified using history.pushState() or history.replaceState().
+      // onhashchange = (event) => { }
+      /*
+	function locationHashChanged() {
+	if (location.hash === "#cool-feature") {
+	console.log("You're visiting a cool feature!");
+	}
+	}
+
+	window.onhashchange = locationHashChanged;
+      */
+    </script>
+    <script>
+      window.navigation.addEventListener("navigate", (event) => {
+	  // Ignore cross-origin navigations or file downloads (e.g., <area download>)
+	  if (!event.canIntercept || event.downloadRequest !== null) {
+	      return;
+	  }
+
+	  const destinationUrl = new URL(event.destination.url);
+
+	  event.intercept({
+	      async handler() {
+		  // 1. POST <form> submission: data is attached to event.formData
+		  if (event.formData) {
+		      console.log("POST form data:", Object.fromEntries(event.formData));
+		      // Send event.formData via fetch() and update UI
+		      return;
+		  }
+
+		  // 2. GET <form> submission: inputs are already serialized in destinationUrl.searchParams
+		  if (event.sourceElement?.closest("form")) {
+		      console.log("GET form params:", Object.fromEntries(destinationUrl.searchParams));
+		      // Render results for destinationUrl
+		      return;
+		  }
+
+		  // 3. <map> / usemap hit: sourceElement is the clicked <area>
+		  if (event.sourceElement instanceof HTMLAreaElement) {
+		      console.log("Usemap area clicked:", event.sourceElement.alt, destinationUrl.href);
+		      // Handle image map route change
+		      return;
+		  }
+
+		  // 4. All other same-origin navigations (<a> links, back/forward)
+		  console.log("Standard navigation to:", destinationUrl.href);
+	      },
+	  });
+      });
+
+    </script>
+    <script>
+      window.navigation.addEventListener("navigate", (event) => {
+	  if (!event.canIntercept || event.downloadRequest !== null) return;
+
+	  const url = new URL(event.destination.url);
+
+	  event.intercept({
+	      async handler() {
+		  // Case 1: <a href="/map"><img ismap></a>
+		  // url.search is formatted as "?x,y" (e.g., "?120,85")
+		  if (event.sourceElement?.querySelector("img[ismap]")) {
+		      const [x, y] = url.search.slice(1).split(",").map(Number);
+		      console.log("ismap hit at:", { x, y, href: url.pathname });
+		      return;
+		  }
+
+		  // Case 2: <form> submitted via <input type="image" name="map">
+		  // Coordinates are in formData (POST) or url.searchParams (GET)
+		  const params = event.formData ?? url.searchParams;
+		  const xKey = [...params.keys()].find((k) => k === "x" || k.endsWith(".x"));
+		  const yKey = [...params.keys()].find((k) => k === "y" || k.endsWith(".y"));
+
+		  if (xKey && yKey) {
+		      const x = Number(params.get(xKey));
+		      const y = Number(params.get(yKey));
+		      console.log("input[type=image] hit at:", { x, y, prefix: xKey.replace(/\.?x$/, "") });
+		      return;
+		  }
+	      },
+	  });
+      });
+
+    </script>
     <script type="module" src="main.js"></script>
-</body>
+  </body>

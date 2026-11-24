@@ -1,10 +1,10 @@
 
 export default function proxy() {
-    const canvasA = document.getElementById("main");
-    const canvasB = document.getElementById("worker");
+    const canvasA = document.getElementById("modulus-canvas");
+    const canvasB = document.getElementById("index-canvas");
 
-    const mainButton = document.getElementById("main-button");
-    const workerButton = document.getElementById("worker-button");
+    const mainButton = document.getElementById("modulus-button");
+    const workerButton = document.getElementById("index-button");
 
     const ctxA = canvasA.getContext("2d");
     const canvasWidth = ctxA.width;

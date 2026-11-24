@@ -1,0 +1,14 @@
+strict digraph controller {
+    bgcolor=transparent;
+    URL=<index.html>;
+    node [style=filled;color=<lightblue:lightgrey>;bgcolor=<lightblue:lightgrey>;];
+    edge [color=<lightblue:lightgrey>;]
+    C0 [ URL=<#command-word> pos = "0,0!" ];
+    C1 [ URL=<#command-word> pos = "2,0" ];
+    X0000 [ URL=<#command-word> pos = "2,2!" ];
+    U000000 [ URL=<#output-color> ];
+    C0 -> X0000 -> U000000;
+    C1 -> X0000 -> U000000;
+    U000000 -> X0000 -> U000000;
+}
+

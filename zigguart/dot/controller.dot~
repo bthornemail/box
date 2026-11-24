@@ -1,0 +1,24 @@
+digraph ziggurat {
+    layout=neato
+    size=<width=640;height=48;>
+    margin=8
+    dim=10
+    dimen=10
+    overlap=scale
+    rankdir=BT
+    start=<datetime>
+    bgcolor=transparent;
+    layers=<local:pvt:test:new:ofc>;
+    layerselect=<new>;
+
+    
+    URL=<http://127.0.0.1/base.html>;
+    command [URL=<http://127.0.0.1/command.html>];
+    command -> output [URL=<colors.html>];
+    //    digraph G { n0 [ pos = "0,0!" ]; n1 [ pos = "2,0" ]; n2 [ pos = "2,2!" ]; n0 -- n1 -- n2 -- n3 -- n0; } 
+
+    node [label=<00F\N>;style=filled;color=<lightblue:lightgrey>;bgcolor=<lightblue:lightgrey>;];
+    edge [label=<\E>;color=<lightblue:lightgrey>;]
+
+}
+
