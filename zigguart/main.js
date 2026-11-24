@@ -1,9 +1,9 @@
 
-import { applyChanges, getChanges } from "../src/node.js";
-import { template } from "../src/template/templates.js";
-import { getPointer } from "../src/pointer.events.js";
-import loadSVGElement from "../src/lib/load.svg.element.js";
-import proxy from "../src/proxy.js";
+import { applyChanges, getChanges } from "./src/node.js";
+import { template } from "./src/template/templates.js";
+import { getPointer } from "./src/pointer.events.js";
+import loadSVGElement from "./src/lib/load.svg.element.js";
+import proxy from "./src/proxy.js";
 export async function joinAndCompose(nodes) {
     for (const node of nodes) {
         console.log(node.id);
