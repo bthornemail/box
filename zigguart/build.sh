@@ -11,6 +11,12 @@ alef=alef
 ziggurat=ziggurat
 ziguaroth=ziguaroth
 
+time dot -Tplain -o${dir}/${target}/${ziguaroth}.txt ${dir}/${source}/${ziguaroth}.dot;
+time dot -Tplain -o${dir}/${target}/${ziggurat}.txt ${dir}/${source}/${ziggurat}.dot;
+
+time dot -Tplain-ext -o${dir}/${target}/${ziguaroth}.text ${dir}/${source}/${ziguaroth}.dot;
+time dot -Tplain-ext -o${dir}/${target}/${ziggurat}.text ${dir}/${source}/${ziggurat}.dot;
+
 time dot -Tsvg -o${dir}/${target}/${alef}.svg ${dir}/${source}/${alef}.dot;
 time dot -Tsvg -o${dir}/${target}/${ziggurat}.svg ${dir}/${source}/${ziggurat}.dot;
 time dot -Tsvg -o${dir}/${target}/${ziguaroth}.svg ${dir}/${source}/${ziguaroth}.dot;
